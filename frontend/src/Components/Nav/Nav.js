@@ -11,6 +11,7 @@ const Nav = () => {
             <Styled.Button onClick = {()=> navigate("/")}>Home</Styled.Button>
             <Styled.Button onClick = {()=> navigate("/about")}>About Us</Styled.Button>
             <Styled.ButtonTest onClick = {()=> navigate("/serverTest")}>Ping Server</Styled.ButtonTest>
+            <Styled.Button onClick = {()=> navigate("/login")}>Login</Styled.Button>
         </Styled.Wrapper>
     );
 };

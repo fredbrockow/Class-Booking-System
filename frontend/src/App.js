@@ -9,6 +9,7 @@ import {
 import GlobalStyles from "./GlobalStyles";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
+import Login from "./Components/Login-SignUp/Login";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Page404 from "./Components/Page404/Page404";
 
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout/>}>
               <Route index element={<Home/>}/>
+              <Route path="login" element={<Login/>}/>
               <Route path="about" element={<AboutUs/>}/>
               <Route path="*" element={<Page404/>}/>
 
