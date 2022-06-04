@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import * as Styled from "./Nav.styles"
 
 import { useNavigate } from "react-router-dom";
 
@@ -7,15 +7,12 @@ const Nav = () => {
     const navigate = useNavigate();
 
     return (
-        <Wrapper>
-            <Button onClick = {()=> navigate("/")}>Home</Button>
-            <Button onClick = {()=> navigate("/about")}>About Us</Button>
-        </Wrapper>
+        <Styled.Wrapper>
+            <Styled.Button onClick = {()=> navigate("/")}>Home</Styled.Button>
+            <Styled.Button onClick = {()=> navigate("/about")}>About Us</Styled.Button>
+            <Styled.ButtonTest onClick = {()=> navigate("/serverTest")}>Ping Server</Styled.ButtonTest>
+        </Styled.Wrapper>
     );
 };
-
-const Wrapper = styled.div``;
-
-const Button = styled.button``;
 
 export default Nav;
