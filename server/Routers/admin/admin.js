@@ -7,7 +7,7 @@ const verifyRoles = require('../../middleware/verifyRoles.js');
 // to get the users of the studio
 
 router.get('/', (req, res) => {
-    res.status(200).json("users");
+    res.status(200).json("admin");
 })
 
 module.exports = router;

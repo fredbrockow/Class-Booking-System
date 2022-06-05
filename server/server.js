@@ -15,9 +15,10 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 
 
 
-app.use('/server', require('./Routers/testRoutes'));
-app.use('/login', require('./Routers/auth'));
-app.use("/users", require('./Routers/users/users'));
+app.use('/server', require('./routers/testRoutes'));
+app.use('/login', require('./routers/auth'));
+app.use("/users", require('./routers/users/users'));
+app.use("/admin", require('./routers/admin/admin'));
 
 app.listen (port, () => {
     console.log(`app running, listening on port ${port}`);
