@@ -35,9 +35,11 @@ const authHandler = async (req, res) => {
         // a normal token
         // and a refresh Token
 
+        const roles = Object.values(userFound.roles);
+
         return res.status(200).json({
             status: 200,
-            data: req.body,
+            data: {username :userFound.username, roles},
             message: "user loged in"
         })
     } else {

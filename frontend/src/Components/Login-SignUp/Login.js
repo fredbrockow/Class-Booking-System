@@ -1,20 +1,23 @@
 import * as Styled from "./Login.styles";
-import { NavLink } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-import { useRef, useState, useEffect, useContext } from 'react';
-import AuthContext from "../Context/AuthProvider";
+import { useRef, useState, useEffect } from 'react';
+import useAuth from "../../Hooks/useAuth";
 
 
 const Login = () => {
 
-    const { setAuth } = useContext(AuthContext);
+    const { setAuth } = useAuth();
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const userRef = useRef();
 
     const [username, setUsername] = useState('');
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState(false);
 
 
     useEffect(() => {
@@ -45,14 +48,14 @@ const Login = () => {
                 if(data.status === 200){
                     setUsername('');
                     setPwd('');
-                    setSuccess(true);
+                    navigate(from, { replace: true });
 
                     /** when it's time for Jswt */
                     // const accessToken = response?.data?.accessToken;
                     // const roles = response?.data?.roles;
-                    // setAuth({ username, pwd, roles, accessToken });
 
-                    setAuth ({username, pwd});
+                    // setAuth({ username, pwd, roles, accessToken });
+                       setAuth({username, pwd, roles: data.data.roles});
                 }
                 else{
                     setErrMsg(data.message);
@@ -67,15 +70,6 @@ const Login = () => {
 
     return (
         <Styled.Wrapper>
-            {success ? (
-                <section>
-                    <h1>You are logged in!</h1>
-                    <br />
-                    <p>
-                        <NavLink to="/" > got to Home </NavLink>
-                    </p>
-                </section>
-            ) : (<>
             <Styled.ErrorSection className={errMsg ? "error_msg" : "hide"}>{errMsg}</Styled.ErrorSection>
             <Styled.Title>Sign In</Styled.Title>
                     <Styled.Loginform onSubmit={handleSubmit}>
@@ -89,7 +83,6 @@ const Login = () => {
                             value={username}
                             required
                         />
-
                         <Styled.Label htmlFor="password">Password:</Styled.Label>
                         <Styled.Input
                             type="password"
@@ -100,7 +93,6 @@ const Login = () => {
                         />
                         <Styled.SubmitButton type="submit">Sign In</Styled.SubmitButton>
                     </Styled.Loginform>
-                </>)}
         </Styled.Wrapper>
     );
 };

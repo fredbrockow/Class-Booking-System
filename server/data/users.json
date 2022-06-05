@@ -1,10 +1,17 @@
 [
     {
         "username": "admin",
-        "password": "admin"
+        "password": "admin",
+        "roles": {
+            "admin": 147852369,
+            "user": 123456789
+        }
     },
     {
         "username": "user",
-        "password": "user"
+        "password": "user",
+        "roles": {
+            "user": 123456789
+        }
     }
 ]

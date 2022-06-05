@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { authHandler } = require('../Handlers/authHandler')
+const { authHandler } = require('../handlers/authHandler')
 
 router.post("/", authHandler);
 
