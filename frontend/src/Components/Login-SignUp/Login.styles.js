@@ -32,8 +32,18 @@ const Input = styled.input``;
 
 const SubmitButton = styled.button``;
 
+const ErrorSection = styled.div`
+    color:red;
+    font-size: 1em;
+
+    .hide {
+        display:none;
+    }
+`;
+
 
 export {
     Wrapper, Title, Loginform,
-    Label, Input, SubmitButton
+    Label, Input, SubmitButton,
+    ErrorSection
 }
