@@ -15,6 +15,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 
 import UserClass from "./Components/UserClass/UserClass";
 import AdminPanel from "./Components/AdminPanel/AdminPanel";
+import Schedule from "./Components/Schedule/Schedule";
 
 import Page404 from "./Components/Page404/Page404";
 
@@ -22,7 +23,7 @@ import Page404 from "./Components/Page404/Page404";
 import ServerTest from "./ServerTest";
 
 /**
- *  Obviously note secure will change it if I have time to go 
+ *  Obviously note secure. Will change it if I have time to go 
  *  full JSON Web Token
  */
 const ROLES = {
@@ -39,7 +40,8 @@ function App() {
         <Route path="/" element={<Layout/>}>
               
               {/* Public Routes */}
-              <Route index element={<Home/>}/>
+              {/* <Route index element={<Home/>}/> */}
+              <Route index element={<Schedule/>}/>
               <Route path="login" element={<Login/>}/>
               <Route path="about" element={<AboutUs/>}/>
 
