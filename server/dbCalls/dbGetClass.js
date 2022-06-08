@@ -4,7 +4,7 @@ const {
 
 
 const {
-    DB_NAME, TEACHERS,
+    DB_NAME, YOGA_CLASSES,
     getNewClient
 }= require('../configuration/dbConfig');
 
@@ -12,7 +12,7 @@ const {remove_id, remove_idFromArray}= require('./db_utils');
 
 
 
-const dbGetAllTeachers = async () => {
+const dbGetAllClasses = async () => {
 
     const client = getNewClient();
 
@@ -24,7 +24,7 @@ const dbGetAllTeachers = async () => {
         const db = client.db(DB_NAME);
         console.log("connected!");
 
-        const response = await db.collection(TEACHERS).find().toArray();
+        const response = await db.collection(YOGA_CLASSES).find().toArray();
 
         if (response.length < 1 ){
            throw DATA_NOT_FOUND;
@@ -41,7 +41,7 @@ const dbGetAllTeachers = async () => {
    }
 };
 
-const dbGetTeacherById = async (teacherId) => {
+const dbGetClassById = async (classId) => {
     const client = getNewClient();
 
     try{  
@@ -52,8 +52,8 @@ const dbGetTeacherById = async (teacherId) => {
         const db = client.db(DB_NAME);
         console.log("connected!");
         
-        const response = await db.collection(TEACHERS).findOne({id:teacherId});
-
+        const response = await db.collection(YOGA_CLASSES).findOne({id:classId});
+        console.log(response);
         if (response === null ){
             throw DATA_NOT_FOUND;
         }
@@ -71,5 +71,5 @@ const dbGetTeacherById = async (teacherId) => {
 
 
 module.exports = {
-    dbGetAllTeachers, dbGetTeacherById
+    dbGetAllClasses, dbGetClassById
 }

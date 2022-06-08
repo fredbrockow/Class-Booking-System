@@ -110,3 +110,82 @@ other codes:
 **500** : internal server error
 
     note: a check is done on the server side, teacherId has to be a number only (no letters or other characters) 
+
+<br/>
+
+## GET ALL CLASSES
+---
+
+- method **GET**
+- url **/class**
+
+### response format
+
+```json
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 123456,
+            "title": "Pilates",
+            "imgSrc": "/public/Hatha.jpg",
+            "description": "Pilates is a form of fitness that strengthens the deep muscles of the mid-body to support movement and resist environmental pressures. Pilates stretches and lengthens the major muscles of the body by correcting imbalances. It improves flexibility, strength, balance and body awareness.",
+            "teacher": 82185528,
+            "tag": "advanced",
+            "capacity": 25,
+            "isActive": true
+        },
+        {
+            "id": 234567,
+            "title": "Hatha Yoga Foundations",
+            "imgSrc": "/public/Hatha.jpg",
+            "description": "Learning to align and breathe well in a yoga posture is fundamental! If you are well aligned, the effects of the postures will be more profound and will make your practice more effective. These are the ideal classes to deepen your understanding of the postures and to build towards a more advanced practice.",
+            "teacher": 45507237,
+            "tag": "beginer",
+            "capacity": 25,
+            "isActive": true
+        }
+    ],
+    "message": {"sucess": "request was successfull"}
+}
+```
+other codes:
+
+**404** : data not found
+
+**500** : internal server error
+
+<br/>
+
+## GET A CLASS BY ID
+---
+
+- method **GET**
+- url **/class/classId**
+
+### response format
+```json
+{
+    "status": 200,
+    "data": {
+        "id": 123456,
+        "title": "Pilates",
+        "imgSrc": "/public/Hatha.jpg",
+        "description": "Pilates is a form of fitness that strengthens the deep muscles of the mid-body to support movement and resist environmental pressures. Pilates stretches and lengthens the major muscles of the body by correcting imbalances. It improves flexibility, strength, balance and body awareness.",
+        "teacher": 82185528,
+        "tag": "advanced",
+        "capacity": 25,
+        "isActive": true
+    },
+    "message": {
+        "sucess": "request was successfull"
+    }
+}
+```
+other codes:
+
+**404** : data not found
+
+**500** : internal server error
+
+    note: a check is done on the server side, classId has to be a number only (no letters or other characters) 

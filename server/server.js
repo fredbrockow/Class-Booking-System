@@ -22,6 +22,7 @@ app.use("/admin", require('./routers/admin/admin'));
 
 //public get routes
 app.use('/teacher', require('./routers/teacher'));
+app.use('/class', require('./routers/class') );
 
 // Calendar Routes
 app.use('/calendar', require('./routers/calendar'));
