@@ -1,0 +1,56 @@
+[
+  {
+    "dayName": "monday",
+    "slot1": null,
+    "slot2": null,
+    "slot3": null,
+    "slot4": null,
+    "slot5": null,
+    "slot6": null
+  },
+  {
+    "dayName": "tuesday",
+    "slot1": null,
+    "slot2": null,
+    "slot3": null,
+    "slot4": null,
+    "slot5": null,
+    "slot6": null
+  },
+  {
+    "dayName": "wednesday",
+    "slot1": null,
+    "slot2": null,
+    "slot3": null,
+    "slot4": null,
+    "slot5": null,
+    "slot6": null
+  },
+  {
+    "dayName": "thursday",
+    "slot1": null,
+    "slot2": null,
+    "slot3": null,
+    "slot4": null,
+    "slot5": null,
+    "slot6": null
+  },
+  {
+    "dayName": "friday",
+    "slot1": null,
+    "slot2": null,
+    "slot3": null,
+    "slot4": null,
+    "slot5": null,
+    "slot6": null
+  },
+  {
+    "dayName": "saturday",
+    "slot1": null,
+    "slot2": null,
+    "slot3": null,
+    "slot4": null,
+    "slot5": null,
+    "slot6": null
+  }
+]

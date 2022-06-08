@@ -1,0 +1,732 @@
+[
+  {
+    "id": 992,
+    "firstName": "Cordelia",
+    "lastName": "Spinka",
+    "username": "cordelia.spinka",
+    "email": "cordelia.spinka@email.com",
+    "phoneNumber": "+30 473-367-1535 x13423",
+    "password": "gmAoSNbwZI",
+    "dateOfBirth": "1961-12-22",
+    "role": 123456789,
+    "classes": []
+  },
+  {
+    "id": 1232,
+    "firstName": "Kerri",
+    "lastName": "Schmidt",
+    "username": "kerri.schmidt",
+    "email": "kerri.schmidt@email.com",
+    "phoneNumber": "+996 1-512-403-9673 x5049",
+    "password": "29TnFzZoXg",
+    "dateOfBirth": "1991-12-22",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 2054,
+    "firstName": "Florida",
+    "lastName": "Christiansen",
+    "username": "florida.christiansen",
+    "email": "florida.christiansen@email.com",
+    "phoneNumber": "+505 753-777-7220 x504",
+    "password": "XLBQGiYcF6",
+    "dateOfBirth": "1977-07-14",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 3722,
+    "firstName": "Leland",
+    "lastName": "Schuster",
+    "username": "leland.schuster",
+    "email": "leland.schuster@email.com",
+    "phoneNumber": "+994 (620) 015-9715 x354",
+    "password": "ho6jQvnU1g",
+    "dateOfBirth": "1970-09-16",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 757,
+    "firstName": "Leanora",
+    "lastName": "Mosciski",
+    "username": "leanora.mosciski",
+    "email": "leanora.mosciski@email.com",
+    "phoneNumber": "+503 646.879.2586",
+    "password": "84XbfM5seG",
+    "dateOfBirth": "2001-09-11",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 6189,
+    "firstName": "Tuyet",
+    "lastName": "Aufderhar",
+    "username": "tuyet.aufderhar",
+    "email": "tuyet.aufderhar@email.com",
+    "phoneNumber": "+268 1-599-900-5363 x17544",
+    "password": "8x7su04MjL",
+    "dateOfBirth": "1958-08-04",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "friday", "slot": "slot6", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 6570,
+    "firstName": "Dan",
+    "lastName": "Jast",
+    "username": "dan.jast",
+    "email": "dan.jast@email.com",
+    "phoneNumber": "+39 197-003-0288 x24848",
+    "password": "EZ750FSVLB",
+    "dateOfBirth": "1976-02-23",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 }
+    ]
+  },
+  {
+    "id": 5574,
+    "firstName": "Dong",
+    "lastName": "Boyer",
+    "username": "dong.boyer",
+    "email": "dong.boyer@email.com",
+    "phoneNumber": "+52 327.258.4774 x72483",
+    "password": "2gPAzotQ05",
+    "dateOfBirth": "1961-07-29",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "thursday", "slot": "slot5", "classId": 345678 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot6", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 3766,
+    "firstName": "Grady",
+    "lastName": "Bruen",
+    "username": "grady.bruen",
+    "email": "grady.bruen@email.com",
+    "phoneNumber": "+678 196-767-6841",
+    "password": "QXaiMtP4vR",
+    "dateOfBirth": "1968-04-04",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot5", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 7293,
+    "firstName": "Cornelius",
+    "lastName": "Dickinson",
+    "username": "cornelius.dickinson",
+    "email": "cornelius.dickinson@email.com",
+    "phoneNumber": "+767 1-140-794-3375 x037",
+    "password": "OHmE8F2kGR",
+    "dateOfBirth": "1971-08-08",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 5970,
+    "firstName": "Rick",
+    "lastName": "Rogahn",
+    "username": "rick.rogahn",
+    "email": "rick.rogahn@email.com",
+    "phoneNumber": "+262 (391) 401-9396",
+    "password": "Oa1V94Ldqp",
+    "dateOfBirth": "1982-04-06",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 4777,
+    "firstName": "Johna",
+    "lastName": "McLaughlin",
+    "username": "johna.mclaughlin",
+    "email": "johna.mclaughlin@email.com",
+    "phoneNumber": "+679 421.231.1540 x1472",
+    "password": "CabWSlLNFo",
+    "dateOfBirth": "1990-12-13",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
+      { "dayName": "thursday", "slot": "slot5", "classId": 345678 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 4017,
+    "firstName": "Rubin",
+    "lastName": "Larson",
+    "username": "rubin.larson",
+    "email": "rubin.larson@email.com",
+    "phoneNumber": "+90 237.646.2490",
+    "password": "dziRn7kgDP",
+    "dateOfBirth": "1968-03-20",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 9757,
+    "firstName": "Youlanda",
+    "lastName": "Schroeder",
+    "username": "youlanda.schroeder",
+    "email": "youlanda.schroeder@email.com",
+    "phoneNumber": "+378 1-741-861-0070 x31102",
+    "password": "Qb2enCqshY",
+    "dateOfBirth": "1959-01-10",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 }
+    ]
+  },
+  {
+    "id": 8455,
+    "firstName": "Sammy",
+    "lastName": "Grady",
+    "username": "sammy.grady",
+    "email": "sammy.grady@email.com",
+    "phoneNumber": "+34 (755) 227-2710 x95280",
+    "password": "Nof6Q1mDYb",
+    "dateOfBirth": "1989-08-27",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 7730,
+    "firstName": "Hildred",
+    "lastName": "Haag",
+    "username": "hildred.haag",
+    "email": "hildred.haag@email.com",
+    "phoneNumber": "+504 1-340-325-5344 x57329",
+    "password": "f5Ovc6zHpM",
+    "dateOfBirth": "1959-02-18",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 }
+    ]
+  },
+  {
+    "id": 3521,
+    "firstName": "Yen",
+    "lastName": "Hermann",
+    "username": "yen.hermann",
+    "email": "yen.hermann@email.com",
+    "phoneNumber": "+354 832.070.7438 x52880",
+    "password": "4clnzsvugO",
+    "dateOfBirth": "1983-07-11",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 }
+    ]
+  },
+  {
+    "id": 4089,
+    "firstName": "Marvin",
+    "lastName": "Lockman",
+    "username": "marvin.lockman",
+    "email": "marvin.lockman@email.com",
+    "phoneNumber": "+996 (695) 997-9084",
+    "password": "ojcOz3ntHb",
+    "dateOfBirth": "1965-03-12",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "thursday", "slot": "slot5", "classId": 345678 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 8174,
+    "firstName": "Amado",
+    "lastName": "Lebsack",
+    "username": "amado.lebsack",
+    "email": "amado.lebsack@email.com",
+    "phoneNumber": "+291 (934) 071-4786",
+    "password": "rkVvyUXszS",
+    "dateOfBirth": "1968-07-12",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 6900,
+    "firstName": "Aimee",
+    "lastName": "Torp",
+    "username": "aimee.torp",
+    "email": "aimee.torp@email.com",
+    "phoneNumber": "+974 182-075-8747 x440",
+    "password": "fd756TLmzH",
+    "dateOfBirth": "1958-04-25",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 1667,
+    "firstName": "Ozzie",
+    "lastName": "Hermann",
+    "username": "ozzie.hermann",
+    "email": "ozzie.hermann@email.com",
+    "phoneNumber": "+1-876 886.227.7207",
+    "password": "OG7dH2TfIF",
+    "dateOfBirth": "1960-03-19",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "saturday", "slot": "slot5", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 1373,
+    "firstName": "Trey",
+    "lastName": "Crona",
+    "username": "trey.crona",
+    "email": "trey.crona@email.com",
+    "phoneNumber": "+351 698-005-1842 x218",
+    "password": "A4WULkiStY",
+    "dateOfBirth": "1967-04-04",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "saturday", "slot": "slot5", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 9486,
+    "firstName": "Geneva",
+    "lastName": "Von",
+    "username": "geneva.von",
+    "email": "geneva.von@email.com",
+    "phoneNumber": "+974 423.839.7421 x1312",
+    "password": "G39DguAiXv",
+    "dateOfBirth": "1988-09-25",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot5", "classId": 234567 },
+      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 2451,
+    "firstName": "Vernice",
+    "lastName": "Weber",
+    "username": "vernice.weber",
+    "email": "vernice.weber@email.com",
+    "phoneNumber": "+767 345.355.5680",
+    "password": "0OIrntpjFe",
+    "dateOfBirth": "2004-03-20",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot5", "classId": 345678 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 }
+    ]
+  },
+  {
+    "id": 3168,
+    "firstName": "Lyle",
+    "lastName": "Hickle",
+    "username": "lyle.hickle",
+    "email": "lyle.hickle@email.com",
+    "phoneNumber": "+238 987-417-9244 x92210",
+    "password": "JD7TYU6ABa",
+    "dateOfBirth": "2000-09-12",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot6", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 9019,
+    "firstName": "Jeffrey",
+    "lastName": "Brown",
+    "username": "jeffrey.brown",
+    "email": "jeffrey.brown@email.com",
+    "phoneNumber": "+239 1-700-800-3802 x224",
+    "password": "OhGMiSEIKs",
+    "dateOfBirth": "1973-03-27",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 }
+    ]
+  },
+  {
+    "id": 9014,
+    "firstName": "Robby",
+    "lastName": "Doyle",
+    "username": "robby.doyle",
+    "email": "robby.doyle@email.com",
+    "phoneNumber": "+297 (637) 408-1912",
+    "password": "150yI9xAjc",
+    "dateOfBirth": "1970-10-26",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 }
+    ]
+  },
+  {
+    "id": 2401,
+    "firstName": "Temple",
+    "lastName": "Hackett",
+    "username": "temple.hackett",
+    "email": "temple.hackett@email.com",
+    "phoneNumber": "+677 1-793-144-6766",
+    "password": "4B0JcgILiS",
+    "dateOfBirth": "1965-12-28",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot6", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 3239,
+    "firstName": "Gerry",
+    "lastName": "Jones",
+    "username": "gerry.jones",
+    "email": "gerry.jones@email.com",
+    "phoneNumber": "+90 (613) 855-0196 x37692",
+    "password": "tNemTifnG9",
+    "dateOfBirth": "1961-01-08",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot6", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 6074,
+    "firstName": "Roseanna",
+    "lastName": "Rowe",
+    "username": "roseanna.rowe",
+    "email": "roseanna.rowe@email.com",
+    "phoneNumber": "+975 688.607.8763 x23186",
+    "password": "590kZnsIEi",
+    "dateOfBirth": "1989-09-07",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 5264,
+    "firstName": "Reyna",
+    "lastName": "O'Conner",
+    "username": "reyna.o'conner",
+    "email": "reyna.o'conner@email.com",
+    "phoneNumber": "+976 (858) 063-0044 x61781",
+    "password": "OYaUqjQ6Pn",
+    "dateOfBirth": "1989-11-23",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 6037,
+    "firstName": "Marion",
+    "lastName": "Rohan",
+    "username": "marion.rohan",
+    "email": "marion.rohan@email.com",
+    "phoneNumber": "+592 494-454-1075 x315",
+    "password": "C0yjhvcOKl",
+    "dateOfBirth": "1992-11-23",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "friday", "slot": "slot2", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot3", "classId": 852456 }
+    ]
+  },
+  {
+    "id": 1364,
+    "firstName": "Loyce",
+    "lastName": "Wisoky",
+    "username": "loyce.wisoky",
+    "email": "loyce.wisoky@email.com",
+    "phoneNumber": "+378 778.329.1805 x717",
+    "password": "khKoizIEAr",
+    "dateOfBirth": "1975-11-21",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 }
+    ]
+  },
+  {
+    "id": 1351,
+    "firstName": "Lanny",
+    "lastName": "Greenfelder",
+    "username": "lanny.greenfelder",
+    "email": "lanny.greenfelder@email.com",
+    "phoneNumber": "+269 700-470-4775 x0828",
+    "password": "eKp6rkFg5N",
+    "dateOfBirth": "1959-08-19",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 6784,
+    "firstName": "Nancie",
+    "lastName": "Dibbert",
+    "username": "nancie.dibbert",
+    "email": "nancie.dibbert@email.com",
+    "phoneNumber": "+98 (169) 248-3887 x675",
+    "password": "1vu0yzSVmN",
+    "dateOfBirth": "1967-07-14",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 5744,
+    "firstName": "Ahmad",
+    "lastName": "Keebler",
+    "username": "ahmad.keebler",
+    "email": "ahmad.keebler@email.com",
+    "phoneNumber": "+269 (282) 808-9994",
+    "password": "3M0YwFyTcW",
+    "dateOfBirth": "2001-04-05",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 5188,
+    "firstName": "Kyong",
+    "lastName": "Rogahn",
+    "username": "kyong.rogahn",
+    "email": "kyong.rogahn@email.com",
+    "phoneNumber": "+227 792-246-6691 x38112",
+    "password": "bVt3PKq6CL",
+    "dateOfBirth": "1982-06-16",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
+    ]
+  },
+  {
+    "id": 7877,
+    "firstName": "Carrol",
+    "lastName": "Nikolaus",
+    "username": "carrol.nikolaus",
+    "email": "carrol.nikolaus@email.com",
+    "phoneNumber": "+240 202-699-1361 x88085",
+    "password": "WtOd0npHmB",
+    "dateOfBirth": "2002-04-09",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
+    ]
+  },
+  {
+    "id": 8903,
+    "firstName": "Jeromy",
+    "lastName": "Witting",
+    "username": "jeromy.witting",
+    "email": "jeromy.witting@email.com",
+    "phoneNumber": "+688 357.072.1963 x8093",
+    "password": "cCikEDzwgH",
+    "dateOfBirth": "1970-03-26",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot3", "classId": 852456 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot3", "classId": 852456 }
+    ]
+  },
+  {
+    "id": 4419,
+    "firstName": "Alphonso",
+    "lastName": "Crist",
+    "username": "alphonso.crist",
+    "email": "alphonso.crist@email.com",
+    "phoneNumber": "+91 (677) 718-2124 x577",
+    "password": "YVF5fTv8ZE",
+    "dateOfBirth": "1983-11-02",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "friday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
+    ]
+  }
+]
