@@ -6,7 +6,6 @@ const calendarWeek = require(path.join(__dirname, '../', '/baseData','calendarWe
 const classesIds = require(path.join(__dirname, '../', '/data','/generatedFragments','classesIds.json'));
 const usersIds = require(path.join(__dirname, '../', '/data','/generatedFragments','usersId.json'));
 
-
 const numberOfSlotsPerDay = 6;
 const maxStudentPerClass = 25;
 
@@ -53,7 +52,6 @@ const createACalendarWeek = () => {
 
     return newCalendar;
 };
-
 
 const generateACalendarWeek = async () => {
 
