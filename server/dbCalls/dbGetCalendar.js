@@ -9,7 +9,6 @@ const {
 
 
 const dbGetCalendar = async () => {
-    console.log("I am getting called");
     const client = getNewClient();
 
     try{

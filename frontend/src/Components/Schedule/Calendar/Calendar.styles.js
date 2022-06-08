@@ -15,7 +15,10 @@ const Week = styled.div`
     grid-template-columns:
     [monday] 1fr
     [tuesday] 1fr
-    [wednesday] 1fr;
+    [wednesday] 1fr
+    [thursday] 1fr
+    [friday] 1fr
+    [saturday] 1fr;
 `;
 
 const WeekDayName = styled.div`
