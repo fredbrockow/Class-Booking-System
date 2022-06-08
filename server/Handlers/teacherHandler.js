@@ -1,12 +1,12 @@
 const {DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR} 
 = require("../configuration/errorMessages");
 
-const { dbGetCalendar } = require ('../dbCalls/dbGetCalendar.js');
+const { dbGetAllTeachers } = require('../dbCalls/dbGetTeacher');
 
-const getCalendarHandler = async (req, res) => {
-
+const getAllTeachersHandler = async (req, res) => {
+    
     try{
-        const response = await dbGetCalendar();
+        const response = await dbGetAllTeachers();
         res.status(200).json(
             {
                 status: 200,
@@ -37,5 +37,5 @@ const getCalendarHandler = async (req, res) => {
 };
 
 module.exports = {
-    getCalendarHandler
+    getAllTeachersHandler
 }

@@ -17,7 +17,7 @@ const dbGetCalendar = async () => {
          console.log("connected!");
 
          const response = await db.collection(CALENDAR_WEEK).find().toArray();
-        console.log(response);
+
          if (response.length < 1 ){
             throw DATA_NOT_FOUND;
         }
