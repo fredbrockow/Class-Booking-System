@@ -31,7 +31,6 @@ const generateUsers = async (number) => {
         arrUsers.push(formatUser(user));
         usersId.push(user.id)
     }
-    // console.log(arrUser);
     return {users:arrUsers, ids:usersId};
 }
 
@@ -52,7 +51,6 @@ const generateUsersFragmentsAndIds = async (numOfUsers) => {
 
     console.log("done generating users and users ids");
 }
-
 
 module.exports = {
     generateUsersFragmentsAndIds
