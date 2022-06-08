@@ -9,6 +9,7 @@ import { useState, useEffect, useCallback } from "react";
 const Schedule = () => {
 
     const [calendar, setCalendar] = useState();
+    const [yogaClass, setYogaClass]= useState()
     const [selectedClass, setSelectedClass] = useState(null);
 
     const handleOnClick = (e, classInfo) => {
@@ -21,12 +22,14 @@ const Schedule = () => {
     },[]);
 
     useEffect(() => {
-        const url = "/calendar";
+        const calendarUrl = "/calendar";
+        const classesUrl = "/class";
 
-        const getCalendar = async (url) => {
+
+        const getCalendar = async (calendarUrl, classesUrl) => {
 
             try {
-                await fetch (url)
+                await fetch (calendarUrl)
                 .then(res => res.json())
                 .then((res) => {
                     if(res.status === 200){
@@ -36,14 +39,29 @@ const Schedule = () => {
                         throw res.message;
                     }
                 });
+            }
+            catch (err) {
+                console.log("there was an error ",err);
+            }
 
+            try {
+                await fetch (classesUrl)
+                .then(res => res.json())
+                .then((res) => {
+                    if(res.status === 200){
+                        setYogaClass(res.data);
+                    }
+                    else{
+                        throw res.message;
+                    }
+                });
             }
             catch (err) {
                 console.log("there was an error ",err);
             }
         }
         
-        getCalendar(url);
+        getCalendar(calendarUrl,classesUrl);
 
         window.addEventListener("click", handleDeselectOnClick);
 
@@ -53,17 +71,18 @@ const Schedule = () => {
 
     }, []);
 
-
+    // console.log("calendar ", calendar);
+    // console.log("yoga classes ", yogaClass);
 
     return (
         <Styled.Wrapper>
             <Styled.Title>This Week Schedule</Styled.Title>
             {
-                calendar ?
+                calendar && yogaClass ?
                 <Styled.SubWrapper>
                     <Calendar
-                        yogaClasses = {calendar.yoga_classes}
-                        week = {calendar.calendar}
+                        yogaClasses = {yogaClass}
+                        week = {calendar}
                         handleOnClick = {handleOnClick}
                     />
                     <Styled.RightSideWrapper>

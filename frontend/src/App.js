@@ -40,8 +40,8 @@ function App() {
         <Route path="/" element={<Layout/>}>
               
               {/* Public Routes */}
-              {/* <Route index element={<Home/>}/> */}
-              <Route index element={<Schedule/>}/>
+              <Route index element={<Home/>}/>
+              <Route path="schedule" element={<Schedule/>}/>
               <Route path="login" element={<Login/>}/>
               <Route path="about" element={<AboutUs/>}/>
 
