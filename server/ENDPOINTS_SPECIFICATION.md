@@ -77,3 +77,36 @@ other codes:
 **404** : data not found
 
 **500** : internal server error
+
+<br/>
+
+## GET A TEACHER BY ID
+---
+
+- method **GET**
+- url **/teacher/teacherId**
+
+### response format
+```json
+{
+    "status": 200,
+    "data": {
+        "id": 45507237,
+        "firstName": "Sebastien",
+        "lastName": "Tremblay",
+        "username": "sebastien.tremblay",
+        "email": "sebastien.tremblay@email.com",
+        "phoneNumber": "+809 1-543-492-6989 x5744"
+    },
+    "message": {
+        "sucess": "request was successfull"
+    }
+}
+```
+other codes:
+
+**404** : data not found
+
+**500** : internal server error
+
+    note: a check is done on the server side, teacherId has to be a number only (no letters or other characters) 

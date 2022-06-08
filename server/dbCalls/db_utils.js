@@ -1,5 +1,11 @@
 
 
+const remove_id = (element) => {
+    const {_id, ...trimmedElement} = element;
+
+    return trimmedElement;
+}
+
 const remove_idFromArray = (arr) => {
     arrResult = [];
 
@@ -12,5 +18,5 @@ const remove_idFromArray = (arr) => {
 };
 
 module.exports = {
-    remove_idFromArray
+    remove_id, remove_idFromArray
 }

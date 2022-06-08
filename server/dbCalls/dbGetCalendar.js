@@ -1,5 +1,9 @@
 const {
-    DB_NAME, USERS, YOGA_CLASSES, CALENDAR_WEEK, TEACHERS,
+    DATA_NOT_FOUND
+} = require ('../configuration/errorMessages');
+
+const {
+    DB_NAME, CALENDAR_WEEK,
     getNewClient
 }= require('../configuration/dbConfig');
 
