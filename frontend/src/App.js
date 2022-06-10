@@ -21,6 +21,8 @@ import Page404 from "./Components/Page404/Page404";
 
 /* To ping the server DELETE ME */
 import ServerTest from "./ServerTest";
+import UsersPerWeek from "./Components/AdminPanel/BarCharts/UsersPerWeek";
+import UsersPerClass from "./Components/AdminPanel/BarCharts/UsersPerClass";
 
 /**
  *  Obviously note secure. Will change it if I have time to go 
@@ -34,38 +36,50 @@ const ROLES = {
 function App() {
 
   return (
-    <Router>
-      <GlobalStyles/>
-      <Routes>
-        <Route path="/" element={<Layout/>}>
-              
-              {/* Public Routes */}
-              <Route index element={<Home/>}/>
-              <Route path="schedule" element={<Schedule/>}/>
-              <Route path="login" element={<Login/>}/>
-              <Route path="about" element={<AboutUs/>}/>
+     <Main>
+      <Router>
+        <GlobalStyles/>
+        <Routes>
+          <Route path="/" element={<Layout/>}>
+                
+                {/* Public Routes */}
+                <Route index element={<Home/>}/>
+                <Route path="schedule" element={<Schedule/>}/>
+                <Route path="login" element={<Login/>}/>
+                <Route path="about" element={<AboutUs/>}/>
 
-              {/* protected users Routes */}
-              <Route element={<RequireAuth allowedRoles = {[ROLES.user, ROLES.admin]}/> } >
-                  <Route path="myClass" element={<UserClass/>}/>
-              </Route>
+                {/* protected users Routes */}
+                <Route element={<RequireAuth allowedRoles = {[ROLES.user, ROLES.admin]}/> } >
+                    <Route path="myClass" element={<UserClass/>}/>
+                </Route>
 
-              {/* protected admin Routes */}
-              <Route element={<RequireAuth allowedRoles = {[ROLES.admin]}/> } >
-                <Route path="admin" element={<AdminPanel/>}/>
-              </Route>
-              
-              {/* To ping the server DELETE ME */}
-              <Route path="serverTest" element={<ServerTest/>}/>
+                {/* protected admin Routes */}
+                {/* <Route element={<RequireAuth allowedRoles = {[ROLES.admin]}/> } >
+                  <Route path="admin" element={<AdminPanel/>}/>
+                </Route> */}
+                  
+                  
+                  {/* FOR TEST ONLY NEED TO BE BACK IN THE PROTECTED AREA ONCE DONE */}
+                  <Route path="admin//*" element={<AdminPanel/>}>
+                    <Route path= "usersPerWeek" element = {<UsersPerWeek/>}/> 
+                    <Route path= "usersPerClass" element = {<UsersPerClass/>}/>
+                  </Route>
+                
+                {/* To ping the server DELETE ME */}
+                <Route path="serverTest" element={<ServerTest/>}/>
 
-              <Route path="*" element={<Page404/>}/>
-              
-        </Route>
-      </Routes>
-    </Router>
+                <Route path="*" element={<Page404/>}/>
+                
+          </Route>
+        </Routes>
+      </Router>
+     </Main>
   );
 }
 
-const Main = styled.div``;
+const Main = styled.div`
+  background-color: cornsilk;
+  height: 100vh;
+`;
 
 export default App;

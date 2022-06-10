@@ -1,9 +1,13 @@
 import * as Styled from "./AdminPanel.styles";
 
+import SidePanel from "./SidePanel";
+import MainPanel from "./MainPanel";
+
 const AdminPanel = () => {
     return (
         <Styled.Wrapper>
-            the admin panel for admins ..
+            <SidePanel/>
+            <MainPanel/>
         </Styled.Wrapper>
     );
 };
