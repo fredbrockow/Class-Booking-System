@@ -1,4 +1,9 @@
+const { v4: uuidv4 } = require('uuid');
 
+
+const getUniqueId = () => {
+    return uuidv4();
+}
 
 const remove_id = (element) => {
     const {_id, ...trimmedElement} = element;
@@ -18,5 +23,5 @@ const remove_idFromArray = (arr) => {
 };
 
 module.exports = {
-    remove_id, remove_idFromArray
+    remove_id, remove_idFromArray, getUniqueId
 }

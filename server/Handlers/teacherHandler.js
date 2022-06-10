@@ -1,8 +1,13 @@
-const {DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR} 
+const 
+{
+    DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR, 
+    BAD_DATA_FORMAT, ALREADY_EXISTS, ERROR_INSERTING_TEACHER
+} 
 = require("../configuration/errorMessages");
 
 const { dbGetAllTeachers, dbGetTeacherById } = require('../dbCalls/dbGetTeacher');
-const { containsOnlyNumbers } = require('./handlers.utils');
+const {dbAdminAddTeacher} = require('../dbCalls/dbAdminTeacher')
+const { containsOnlyNumbers, validatePerson } = require('./handlers.utils');
 
 const getAllTeachersHandler = async (req, res) => {
     
@@ -25,7 +30,8 @@ const getAllTeachersHandler = async (req, res) => {
                     message: {error : err}
                 }
             )
-        }else{
+        }
+        else{
             res.status(500).json(
                 {
                     status: 500,
@@ -84,6 +90,63 @@ const getTeacherByIdHandler = async (req, res) => {
     }
 };
 
+const adminAddTeacherHandler = async (req, res) => {
+    // console.log(req.body);
+
+    const personInfo = req.body;
+
+    if (!validatePerson(personInfo)){
+        res.status(400).json(
+            {
+                status: 400,
+                data: req.body,
+                message: {error : BAD_DATA_FORMAT}
+            }
+        )
+        return;
+    }else {
+        try{
+            const response = await dbAdminAddTeacher(personInfo);
+            res.status(200).json(
+                {
+                    status: 200,
+                    data: response,
+                    message: {sucess : SUCCESS}
+                }
+            )
+        }
+        catch(err) {
+            if (err === ALREADY_EXISTS) {
+                res.status(400).json(
+                    {
+                        status: 400,
+                        data: req.body,
+                        message: {error : ALREADY_EXISTS}
+                    }
+                )
+            }
+            else if (err === ERROR_INSERTING_TEACHER){
+                res.status(400).json(
+                    {
+                        status: 400,
+                        data: req.body,
+                        message: {error : ERROR_INSERTING_TEACHER}
+                    }
+                )
+            }
+            else {
+                res.status(500).json(
+                    {
+                        status: 500,
+                        data: {},
+                        message: {error : err}
+                    }
+                )
+            }
+        }
+    }
+}
+
 module.exports = {
-    getAllTeachersHandler, getTeacherByIdHandler
+    getAllTeachersHandler, getTeacherByIdHandler, adminAddTeacherHandler
 }

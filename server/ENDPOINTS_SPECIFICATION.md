@@ -233,8 +233,65 @@ params: <br/>
 ```
 other codes:
 
-**404** : data not found () (bad credentails)
+**404** : data not found () (bad credentials)
 
 **400**: username and password are required
+
+**500** : internal server error
+
+<br/>
+
+# ADMIN ROUTES
+
+<br/>
+
+## ADD A TEACHER
+---
+
+- method **POST**
+- url **/admin/teacher**
+
+<br/>
+
+### Add a new teacher in the database
+    validation for all fields (must be present and be a string)
+    check if teacher already exists (username match or email match)
+
+
+### post request format
+```json
+{
+    "firstName": "New",
+    "lastName": "Teacher",
+    "username": "new.teacher",
+    "email": "new.teacher@email.com",
+    "phoneNumber": "+54 461.977.2168 x7751" 
+}
+```
+### response format
+```json
+{
+    "status": 200,
+    "data": {
+        "id": "32c956d0-36f8-4e05-8b43-263c51341ecd",
+        "firstName": "New",
+        "lastName": "Teacher",
+        "username": "new.teacher",
+        "email": "new.teacher@email.com",
+        "phoneNumber": "+54 461.977.2168 x7751"
+    },
+    "message": {
+        "sucess": "request was successfull"
+    }
+}
+```
+other codes:
+
+
+**400**: teacher username or email address alreay in the database
+
+**400**: error during the insertion in the database
+
+**400**: error bad format for the data sent (not present or undefined or null or not a string)
 
 **500** : internal server error
