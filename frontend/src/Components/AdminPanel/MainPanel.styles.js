@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    display: flex;
+    background-color:#CDC2AE;
+    flex-grow: 1;
 `;
 
 
