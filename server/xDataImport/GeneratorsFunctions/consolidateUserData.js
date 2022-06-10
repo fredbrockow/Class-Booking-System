@@ -42,7 +42,7 @@ const getAllClassesForEachUsers = (usersArr, weekArr) => {
 
     usersArr.forEach(user => {
         let arrOfClass = findClassByUserId ( user.id, weekArr);
-        user.role = 123456789;
+        user.roles = [123456789];
         user.classes = arrOfClass;
 
         arrResult.push({...user});

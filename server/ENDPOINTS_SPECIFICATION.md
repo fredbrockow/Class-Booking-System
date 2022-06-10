@@ -137,7 +137,7 @@ other codes:
         },
         {
             "id": 234567,
-            "title": "Hatha Yoga Foundations",
+            "title": "Hatha Yoga",
             "imgSrc": "/public/Hatha.jpg",
             "description": "Learning to align and breathe well in a yoga posture is fundamental! If you are well aligned, the effects of the postures will be more profound and will make your practice more effective. These are the ideal classes to deepen your understanding of the postures and to build towards a more advanced practice.",
             "teacher": 45507237,
@@ -189,3 +189,52 @@ other codes:
 **500** : internal server error
 
     note: a check is done on the server side, classId has to be a number only (no letters or other characters) 
+
+<br/>
+
+## LOGIN
+---
+
+- method **POST**
+- url **/login**
+
+    verify the credentials of a user to allow / deny login
+
+params: <br/>
+- username <br/>
+- password
+
+### post request format
+```json
+{
+    "username" : "user",
+    "pwd" : "user"
+}
+```
+### response format
+```json
+{
+    "status": 200,
+    "data": {
+        "id": 1111,
+        "firstName": "userFirstName",
+        "lastName": "userLastName",
+        "username": "user",
+        "email": "userFirstName.userLastName@email.com",
+        "phoneNumber": "+11 111-111-111 x11111",
+        "dateOfBirth": "1111-11-11",
+        "roles": [
+            123456789
+        ],
+        "classes": [...data]
+    },
+    "message": "user loged in"
+}
+```
+other codes:
+
+**404** : data not found () (bad credentails)
+
+**400**: username and password are required
+
+**500** : internal server error
