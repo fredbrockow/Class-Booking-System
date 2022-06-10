@@ -10,7 +10,7 @@ const remove_idFromArray = (arr) => {
     arrResult = [];
 
     arr.forEach(element => {
-        const {_id, ...trimmedElement} = element;
+        const {_id, password, ...trimmedElement} = element;
         arrResult.push(trimmedElement);
     });
 

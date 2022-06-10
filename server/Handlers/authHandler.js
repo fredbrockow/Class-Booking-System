@@ -1,4 +1,8 @@
 const registeredUsers = require('../data/users.json');
+const {DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR} 
+= require("../configuration/errorMessages");
+
+const {dbAuthUserByUsername} = require('../dbCalls/dbGetUsers');
 
 const authHandler = async (req, res) => {
     
@@ -13,41 +17,50 @@ const authHandler = async (req, res) => {
         });
     };
 
-    const userFound = registeredUsers.find(registeredUser => {
-        return registeredUser.username === username
-    });
+    try{
+        const userFound = await dbAuthUserByUsername (username);
 
-   if (!userFound) {
-        return res.status(401).json({
-            status: 401,
-            data: req.body,
-            message: "error: unauthorized"
-        });
+        const pwdMatch = userFound.password === pwd
+
+        if (pwdMatch){
+            //create a JWTs to use for the other routes that we want protected
+            // a normal token
+            // and a refresh Token
+    
+            const {password, ...safeNoPwdUser} = userFound;
+    
+            return res.status(200).json({
+                status: 200,
+                data: safeNoPwdUser,
+                message: "user loged in"
+            })
+        } else {
+            return res.status(401).json({
+                status: 401,
+                data: req.body,
+                message: "error: unauthorized"
+            });
+        }
+
     }
-
-    // this is where you put the encryption part
-    // const pwdMatch = await bcrypt.compare(pwd, userFound.password);
-
-    const pwdMatch = userFound.password === pwd
-
-    if (pwdMatch){
-        //create a JWTs to use for the other routes that we want protected
-        // a normal token
-        // and a refresh Token
-
-        const roles = Object.values(userFound.roles);
-
-        return res.status(200).json({
-            status: 200,
-            data: {username :userFound.username, roles},
-            message: "user loged in"
-        })
-    } else {
-        return res.status(401).json({
-            status: 401,
-            data: req.body,
-            message: "error: unauthorized"
-        });
+    catch (err) {
+        if(err === DATA_NOT_FOUND){
+            res.status(404).json(
+                {
+                    status: 404,
+                    data: {},
+                    message: {error : err}
+                }
+            )
+        }else{
+            res.status(500).json(
+                {
+                    status: 500,
+                    data: {},
+                    message: {error : err}
+                }
+            )
+        }
     }
 };
 
