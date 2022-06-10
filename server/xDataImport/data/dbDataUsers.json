@@ -1,5 +1,24 @@
 [
   {
+    "id": 1111,
+    "firstName": "userFirstName",
+    "lastName": "userLastName",
+    "username": "user",
+    "email": "userFirstName.userLastName@email.com",
+    "phoneNumber": "+11 111-111-111 x11111",
+    "password": "user",
+    "dateOfBirth": "1111-11-11",
+    "role": 123456789,
+    "classes": [
+      { "dayName": "monday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 }
+    ]
+  },
+  {
     "id": 992,
     "firstName": "Cordelia",
     "lastName": "Spinka",
@@ -9,7 +28,10 @@
     "password": "gmAoSNbwZI",
     "dateOfBirth": "1961-12-22",
     "role": 123456789,
-    "classes": []
+    "classes": [
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "thursday", "slot": "slot5", "classId": 345678 }
+    ]
   },
   {
     "id": 1232,
@@ -23,7 +45,9 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "thursday", "slot": "slot5", "classId": 345678 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
@@ -42,7 +66,9 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "thursday", "slot": "slot5", "classId": 345678 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
       { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
     ]
@@ -58,9 +84,10 @@
     "dateOfBirth": "1970-09-16",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
-      { "dayName": "friday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "thursday", "slot": "slot5", "classId": 345678 },
       { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
     ]
   },
@@ -75,8 +102,10 @@
     "dateOfBirth": "2001-09-11",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
     ]
@@ -94,6 +123,8 @@
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot6", "classId": 456852 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
@@ -109,8 +140,8 @@
     "dateOfBirth": "1976-02-23",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 }
     ]
@@ -127,13 +158,14 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "thursday", "slot": "slot5", "classId": 345678 },
+      { "dayName": "friday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
-      { "dayName": "friday", "slot": "slot6", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+      { "dayName": "friday", "slot": "slot6", "classId": 456852 }
     ]
   },
   {
@@ -149,11 +181,10 @@
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
-      { "dayName": "friday", "slot": "slot1", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot5", "classId": 234567 }
+      { "dayName": "saturday", "slot": "slot5", "classId": 753159 }
     ]
   },
   {
@@ -168,12 +199,13 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
-      { "dayName": "saturday", "slot": "slot1", "classId": 456852 }
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 }
     ]
   },
   {
@@ -188,10 +220,11 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
-      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
   },
@@ -206,8 +239,8 @@
     "dateOfBirth": "1990-12-13",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
-      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "thursday", "slot": "slot5", "classId": 345678 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
@@ -225,9 +258,11 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
@@ -245,8 +280,10 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
-      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 }
     ]
   },
@@ -262,8 +299,11 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
@@ -282,11 +322,13 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
-      { "dayName": "friday", "slot": "slot1", "classId": 852456 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 }
     ]
@@ -303,8 +345,9 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 }
     ]
   },
@@ -352,12 +395,12 @@
     "dateOfBirth": "1958-04-25",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
-      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
   },
   {
@@ -372,12 +415,12 @@
     "role": 123456789,
     "classes": [
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
-      { "dayName": "friday", "slot": "slot1", "classId": 852456 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
-      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 },
       { "dayName": "saturday", "slot": "slot3", "classId": 852456 },
-      { "dayName": "saturday", "slot": "slot5", "classId": 234567 }
+      { "dayName": "saturday", "slot": "slot5", "classId": 753159 }
     ]
   },
   {
@@ -392,10 +435,11 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
-      { "dayName": "saturday", "slot": "slot5", "classId": 234567 }
+      { "dayName": "saturday", "slot": "slot5", "classId": 753159 }
     ]
   },
   {
@@ -410,13 +454,14 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
-      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot5", "classId": 234567 },
-      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+      { "dayName": "saturday", "slot": "slot5", "classId": 753159 }
     ]
   },
   {
@@ -431,9 +476,10 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
-      { "dayName": "monday", "slot": "slot5", "classId": 345678 },
+      { "dayName": "monday", "slot": "slot5", "classId": 123456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 }
     ]
@@ -449,10 +495,10 @@
     "dateOfBirth": "2000-09-12",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot6", "classId": 456852 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
@@ -468,7 +514,7 @@
     "dateOfBirth": "1973-03-27",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 }
     ]
@@ -484,7 +530,7 @@
     "dateOfBirth": "1970-10-26",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 }
     ]
@@ -501,14 +547,14 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
+      { "dayName": "friday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
       { "dayName": "friday", "slot": "slot6", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 },
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
   },
   {
@@ -524,8 +570,9 @@
     "classes": [
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
       { "dayName": "friday", "slot": "slot6", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
   },
@@ -541,6 +588,7 @@
     "role": 123456789,
     "classes": [
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
@@ -558,7 +606,8 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
       { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
@@ -574,11 +623,15 @@
     "dateOfBirth": "1992-11-23",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot5", "classId": 123456 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
       { "dayName": "friday", "slot": "slot2", "classId": 753159 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
-      { "dayName": "saturday", "slot": "slot1", "classId": 456852 },
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 },
       { "dayName": "saturday", "slot": "slot3", "classId": 852456 }
     ]
   },
@@ -593,9 +646,13 @@
     "dateOfBirth": "1975-11-21",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot5", "classId": 123456 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 }
     ]
   },
@@ -612,8 +669,9 @@
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
-      { "dayName": "monday", "slot": "slot6", "classId": 852456 },
-      { "dayName": "friday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot5", "classId": 123456 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
       { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
     ]
@@ -630,9 +688,13 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot5", "classId": 123456 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
-      { "dayName": "saturday", "slot": "slot1", "classId": 456852 }
+      { "dayName": "saturday", "slot": "slot1", "classId": 123456 }
     ]
   },
   {
@@ -647,11 +709,15 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot5", "classId": 123456 },
+      { "dayName": "monday", "slot": "slot6", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
+      { "dayName": "wednesday", "slot": "slot4", "classId": 852456 },
+      { "dayName": "friday", "slot": "slot1", "classId": 234567 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
-      { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
-      { "dayName": "saturday", "slot": "slot6", "classId": 234567 }
+      { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
   },
   {
@@ -666,7 +732,8 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
+      { "dayName": "monday", "slot": "slot5", "classId": 123456 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
       { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
@@ -683,9 +750,10 @@
     "dateOfBirth": "2002-04-09",
     "role": 123456789,
     "classes": [
-      { "dayName": "monday", "slot": "slot2", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "monday", "slot": "slot5", "classId": 123456 },
+      { "dayName": "tuesday", "slot": "slot2", "classId": 852456 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 }
     ]
@@ -703,8 +771,9 @@
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
       { "dayName": "monday", "slot": "slot3", "classId": 345678 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
       { "dayName": "tuesday", "slot": "slot3", "classId": 753159 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "thursday", "slot": "slot4", "classId": 234567 },
       { "dayName": "friday", "slot": "slot3", "classId": 852456 },
       { "dayName": "saturday", "slot": "slot2", "classId": 456852 },
@@ -723,7 +792,8 @@
     "role": 123456789,
     "classes": [
       { "dayName": "monday", "slot": "slot1", "classId": 852456 },
-      { "dayName": "monday", "slot": "slot4", "classId": 951753 },
+      { "dayName": "tuesday", "slot": "slot5", "classId": 951753 },
+      { "dayName": "wednesday", "slot": "slot1", "classId": 234567 },
       { "dayName": "wednesday", "slot": "slot5", "classId": 951753 },
       { "dayName": "friday", "slot": "slot4", "classId": 951753 },
       { "dayName": "saturday", "slot": "slot4", "classId": 234567 }
