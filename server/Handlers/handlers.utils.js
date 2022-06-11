@@ -7,6 +7,15 @@ const personInfo_fields = [
     "phoneNumber"
 ]
 
+const classInfo_fields = [
+    "title",
+    "description",
+    "teacher",
+    "tag",
+    "capacity",
+    "isActive"
+]
+
 /**
  * Test if a string contains only numbers
  * @param {*} string 
@@ -57,6 +66,68 @@ const personInfo_fields = [
     return isValid;
  }
 
+ const validateClass = (classInfo) => {
+    isValid = true;
+    
+    classInfo_fields.forEach((field) => {
+
+        if(field === "isActive"){
+            if(!classInfo.hasOwnProperty(`isActive`)){
+                isValid =false;
+            }
+            else {
+                if(typeof(classInfo[`isActive`]) !== 'boolean'){
+                    isValid =false;
+                }
+            }
+            return;
+        }
+
+        if(field === "teacher"){
+            if(!classInfo.hasOwnProperty(`teacher`)){
+                isValid =false;
+            }
+            else {
+                if(typeof(classInfo[`teacher`]) !== 'number'){
+                    isValid =false;
+                }
+            }
+            return;
+        }
+
+        if(field === "capacity"){
+            if(!classInfo.hasOwnProperty(`capacity`)){
+                isValid =false;
+            }
+            else {
+                if(typeof(classInfo[`capacity`]) !== 'number'){
+                    isValid =false;
+                }
+            }
+            return;
+        }
+        
+        if(!classInfo.hasOwnProperty(`${field}`)){
+            isValid =false;
+            return;
+        }
+        if (classInfo[`${field}`] === null){
+            isValid =false;
+            return;
+        }
+        if (classInfo[`${field}`] === undefined || classInfo[`${field}`] === "undefined") {
+            isValid =false;
+            return;
+        }
+        if(typeof(classInfo[`${field}`]) !== 'string'){
+            isValid =false;
+            return;
+        }
+    })
+
+    return isValid;
+ }
+
 module.exports = {
-    containsOnlyNumbers, validatePerson
+    containsOnlyNumbers, validatePerson, validateClass
 }

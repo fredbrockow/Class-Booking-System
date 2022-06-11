@@ -47,7 +47,6 @@ const dbAdminAddTeacher = async (teacherInfo) => {
     catch (err) {
         throw err;
     }
-
 }
 
 module.exports = {dbAdminAddTeacher}
