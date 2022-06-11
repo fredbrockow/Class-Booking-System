@@ -12,9 +12,6 @@ app.use(express.json())
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
 
-// Test Route
-app.use('/server', require('./routers/testRoutes'));
-
 // Roles Routes
 app.use('/login', require('./routers/auth'));
 app.use("/users", require('./routers/users/users'));

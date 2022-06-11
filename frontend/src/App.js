@@ -24,8 +24,7 @@ import EditClasses from "./Components/AdminPanel/Edits/EditClasses";
 import EditCalendar from "./Components/AdminPanel/Edits/EditCalendar";
 
 import Page404 from "./Components/Page404/Page404";
-/* To ping the server DELETE ME */
-import ServerTest from "./ServerTest";
+
 
 /**
  *  Obviously note secure. Will change it if I have time to go 
@@ -72,7 +71,6 @@ function App() {
                   </Route>
                 
                 {/* To ping the server DELETE ME */}
-                <Route path="serverTest" element={<ServerTest/>}/>
 
                 <Route path="*" element={<Page404/>}/>
                 
