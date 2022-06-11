@@ -233,8 +233,128 @@ params: <br/>
 ```
 other codes:
 
-**404** : data not found () (bad credentails)
+**404** : data not found () (bad credentials)
 
-**400**: username and password are required
+**400** : username and password are required
+
+**500** : internal server error
+
+<br/>
+
+# ADMIN ROUTES
+
+<br/>
+
+## ADD A TEACHER
+---
+
+- method **POST**
+- url **/admin/teacher**
+
+<br/>
+
+### Add a new teacher in the database
+    validation for all fields (must be present and be a string)
+    check if teacher already exists (username match or email match)
+
+
+### post request format
+```json
+{
+    "firstName": "New",
+    "lastName": "Teacher",
+    "username": "new.teacher",
+    "email": "new.teacher@email.com",
+    "phoneNumber": "+54 461.977.2168 x7751" 
+}
+```
+### response format
+```json
+{
+    "status": 200,
+    "data": {
+        "id": "32c956d0-36f8-4e05-8b43-263c51341ecd",
+        "firstName": "New",
+        "lastName": "Teacher",
+        "username": "new.teacher",
+        "email": "new.teacher@email.com",
+        "phoneNumber": "+54 461.977.2168 x7751"
+    },
+    "message": {
+        "sucess": "request was successfull"
+    }
+}
+```
+other codes:
+
+
+**400** : teacher username or email address alreay in the database
+
+**400** : error during the insertion in the database
+
+**400** : error bad format for the data sent (not present or undefined or null or not a string)
+
+**500** : internal server error
+
+<br/>
+
+## ADD A CLASS
+---
+
+- method **POST**
+- url **/admin/class**
+
+<br/>
+
+### Add a new classin the database
+    validation for all fields (must be present and be a string or number or boolean depending on the field)
+    check if teacher assigned to the class exists 
+    check if the class already exists (for title + teacher)
+
+    SET isActive to FALSE BY DEFAULT, SHOULD BE PUT TO TRUE WHEN THE CALL IS ADDED TO THE CALENDAR
+
+    SRC Picture set by default untill the upload picture fonctionnality is added
+
+
+### post request format
+```json
+  {
+    "title": "New Class",
+    "description": "this is a description of that new class",
+    "teacher": 82185528,
+    "tag": "advanced",
+    "capacity": 25,
+    "isActive": true
+  }
+```
+### response format
+```json
+{
+    "status": 200,
+    "data": {
+        "id": "8d21b836-02d4-457e-a691-7fceb03f816e",
+        "src": "/public/Hatha.jpg",
+        "title": "New Class",
+        "description": "this is a description of that new class",
+        "teacher": 82185528,
+        "tag": "advanced",
+        "capacity": 25,
+        "isActive": false
+    },
+    "message": {
+        "sucess": "request was successfull"
+    }
+}
+```
+other codes:
+
+
+**400** : couldn't find a teacher to assign to this class
+
+**400** : a class with that title and teacher already exist
+
+**400** : error during the insertion in the database
+
+**400** : error bad format for the data sent (not present or undefined or null or not a string)
 
 **500** : internal server error

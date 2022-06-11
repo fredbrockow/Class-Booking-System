@@ -1,8 +1,14 @@
-const {DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR} 
+const 
+{
+    DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR, 
+    BAD_DATA_FORMAT, CLASS_ALREADY_EXISTS, ERROR_INSERTING_CLASS,
+    TEACHER_DOES_NOT_EXIST
+} 
 = require("../configuration/errorMessages");
 
 const { dbGetAllClasses, dbGetClassById } = require('../dbCalls/dbGetClass');
-const { containsOnlyNumbers } = require('./handlers.utils');
+const { dbAdminAddClass }= require('../dbCalls/dbAdminClass')
+const { containsOnlyNumbers, validateClass } = require('./handlers.utils');
 
 const getAllClassesHandler = async (req, res) => {
     
@@ -84,6 +90,72 @@ const getClassByIdHandler = async (req, res) => {
     }
 };
 
+const adminAddClassHandler = async (req, res) => {
+    // console.log(req.body);
+
+    const classInfo = req.body;
+
+    if (!validateClass(classInfo)){
+        res.status(400).json(
+            {
+                status: 400,
+                data: req.body,
+                message: {error : BAD_DATA_FORMAT}
+            }
+        )
+        return;
+    }else {
+        try{
+            const response = await dbAdminAddClass(classInfo);
+            res.status(200).json(
+                {
+                    status: 200,
+                    data: response,
+                    message: {sucess : SUCCESS}
+                }
+            )
+        }
+        catch(err) {
+            if (err === CLASS_ALREADY_EXISTS) {
+                res.status(400).json(
+                    {
+                        status: 400,
+                        data: req.body,
+                        message: {error : CLASS_ALREADY_EXISTS}
+                    }
+                )
+            }
+            else if (err === ERROR_INSERTING_CLASS){
+                res.status(400).json(
+                    {
+                        status: 400,
+                        data: req.body,
+                        message: {error : ERROR_INSERTING_CLASS}
+                    }
+                )
+            }
+            else if (err === TEACHER_DOES_NOT_EXIST){
+                res.status(400).json(
+                    {
+                        status: 400,
+                        data: req.body,
+                        message: {error : TEACHER_DOES_NOT_EXIST}
+                    }
+                )
+            }
+            else {
+                res.status(500).json(
+                    {
+                        status: 500,
+                        data: {},
+                        message: {error : err}
+                    }
+                )
+            }
+        }
+    }
+}
+
 module.exports = {
-    getAllClassesHandler, getClassByIdHandler
+    getAllClassesHandler, getClassByIdHandler, adminAddClassHandler
 }
