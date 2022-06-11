@@ -12,7 +12,7 @@ const authHandler = async (req, res) => {
 
         return res.status(400).json({
             status: 400,
-            data: req.body,
+            data: {},
             message: "error: username and password are required"
         });
     };
@@ -37,7 +37,7 @@ const authHandler = async (req, res) => {
         } else {
             return res.status(401).json({
                 status: 401,
-                data: req.body,
+                data: {},
                 message: "error: unauthorized"
             });
         }

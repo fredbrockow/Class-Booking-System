@@ -4,11 +4,11 @@ import styled from "styled-components";
 import BarCharts from './BarCharts';
 import { useState } from 'react';
 
-import { createUsersPerDayDataSet, classHours, slotColors} from "../DataSet/buildingDatas";
+import { createUsersPerDayDataSet, classHours, slotColors} from "./buildingDatas";
 
-const UsersPerWeek = () => {
+const UsersPerWeek = ({calendar}) => {
 
-    const yogaData = createUsersPerDayDataSet();
+    const yogaData = createUsersPerDayDataSet(calendar);
 
     const stackKey = "stack1";
 

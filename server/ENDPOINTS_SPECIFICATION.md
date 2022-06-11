@@ -245,6 +245,82 @@ other codes:
 
 <br/>
 
+## GET ALL USERS
+---
+
+- method **GET**
+- url **/admin/users**
+
+<br/>
+
+### get all the users in the database
+    used for admin panel only
+
+### response format
+```json
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1111,
+            "firstName": "userFirstName",
+            "lastName": "userLastName",
+            "username": "user",
+            "email": "userFirstName.userLastName@email.com",
+            "phoneNumber": "+11 111-111-111 x11111",
+            "dateOfBirth": "1111-11-11",
+            "roles": [
+                123456789
+            ],
+             "classes": [
+                {
+                    "dayName": "monday",
+                    "slot": "slot1",
+                    "classId": 852456
+                },
+                {
+                    "dayName": "tuesday",
+                    "slot": "slot5",
+                    "classId": 951753
+                },
+                {
+                    "dayName": "wednesday",
+                    "slot": "slot1",
+                    "classId": 234567
+                },
+                {
+                    "dayName": "wednesday",
+                    "slot": "slot5",
+                    "classId": 951753
+                },
+                {
+                    "dayName": "friday",
+                    "slot": "slot4",
+                    "classId": 951753
+                },
+                {
+                    "dayName": "saturday",
+                    "slot": "slot4",
+                    "classId": 234567
+                }
+            ]
+        },
+        {..other Users},
+    ],
+    "message": {
+        "sucess": "request was successfull"
+    }
+}
+```
+other codes:
+
+
+**404** : not found
+
+**500** : internal server error
+
+<br/>
+
 ## ADD A TEACHER
 ---
 

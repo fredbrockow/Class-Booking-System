@@ -4,12 +4,20 @@ const Wrapper = styled.div`
     padding: 1em 3em;
     background-color: #839AA8;
 
-    display: flex;
-    flex-direction: column;
+
 `;
 
 const Button = styled.button``;
 
+const Section = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const SectionTitle = styled.div``;
+
+const Title = styled.div``;
+
 export {
-    Wrapper, Button
+    Wrapper, Button, Section, Title, SectionTitle
 }
