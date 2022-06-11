@@ -78,7 +78,7 @@ const MainPanel = () => {
         <Styled.Wrapper>
                 {teachers && yogaClasses && calendar ?
                     <Routes>
-                        <Route path= "/editTeachers" element = {<EditTeachers/>}/>
+                        <Route path= "/editTeachers" element = {<EditTeachers teachers = {teachers} setTeachers = {setTeachers}/>}/>
                         <Route path= "/editClasses" element = {<EditClasses/>}/>
                         <Route path= "/editCalendar" element = {<EditCalendar/>}/>
                         <Route path= "/usersPerWeek" element = {<UsersPerWeek calendar = {calendar}/>}/>

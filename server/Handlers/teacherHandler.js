@@ -17,7 +17,7 @@ const getAllTeachersHandler = async (req, res) => {
             {
                 status: 200,
                 data: response,
-                message: {sucess : SUCCESS}
+                message: {success : SUCCESS}
             }
         )
     }
@@ -64,7 +64,7 @@ const getTeacherByIdHandler = async (req, res) => {
             {
                 status: 200,
                 data: response,
-                message: {sucess : SUCCESS}
+                message: {success : SUCCESS}
             }
         )
     }
@@ -91,7 +91,7 @@ const getTeacherByIdHandler = async (req, res) => {
 };
 
 const adminAddTeacherHandler = async (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
 
     const personInfo = req.body;
 
@@ -111,7 +111,7 @@ const adminAddTeacherHandler = async (req, res) => {
                 {
                     status: 200,
                     data: response,
-                    message: {sucess : SUCCESS}
+                    message: {success : SUCCESS}
                 }
             )
         }

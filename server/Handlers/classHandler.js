@@ -18,7 +18,7 @@ const getAllClassesHandler = async (req, res) => {
             {
                 status: 200,
                 data: response,
-                message: {sucess : SUCCESS}
+                message: {success : SUCCESS}
             }
         )
     }
@@ -64,7 +64,7 @@ const getClassByIdHandler = async (req, res) => {
             {
                 status: 200,
                 data: response,
-                message: {sucess : SUCCESS}
+                message: {success : SUCCESS}
             }
         )
     }
@@ -111,7 +111,7 @@ const adminAddClassHandler = async (req, res) => {
                 {
                     status: 200,
                     data: response,
-                    message: {sucess : SUCCESS}
+                    message: {success : SUCCESS}
                 }
             )
         }

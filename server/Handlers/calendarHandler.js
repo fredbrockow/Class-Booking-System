@@ -11,7 +11,7 @@ const getCalendarHandler = async (req, res) => {
             {
                 status: 200,
                 data: response,
-                message: {sucess : SUCCESS}
+                message: {success : SUCCESS}
             }
         )
     }

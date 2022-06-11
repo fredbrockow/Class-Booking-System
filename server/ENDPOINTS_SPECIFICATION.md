@@ -25,7 +25,7 @@
             }
         }
     ],
-    "message": {"sucess": "request was successfull"}
+    "message": {"success": "request was successfull"}
 }
 ```
 
@@ -69,7 +69,7 @@ other codes:
             "phoneNumber": "+809 1-543-492-6989 x5744"
         }
     ],
-    "message": {"sucess": "request was successfull"}
+    "message": {"success": "request was successfull"}
 }
 ```
 other codes:
@@ -99,7 +99,7 @@ other codes:
         "phoneNumber": "+809 1-543-492-6989 x5744"
     },
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successfull"
     }
 }
 ```
@@ -146,7 +146,7 @@ other codes:
             "isActive": true
         }
     ],
-    "message": {"sucess": "request was successfull"}
+    "message": {"success": "request was successfull"}
 }
 ```
 other codes:
@@ -178,7 +178,7 @@ other codes:
         "isActive": true
     },
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successfull"
     }
 }
 ```
@@ -308,7 +308,7 @@ other codes:
         {..other Users},
     ],
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successfull"
     }
 }
 ```
@@ -357,7 +357,7 @@ other codes:
         "phoneNumber": "+54 461.977.2168 x7751"
     },
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successfull"
     }
 }
 ```
@@ -418,7 +418,7 @@ other codes:
         "isActive": false
     },
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successfull"
     }
 }
 ```
