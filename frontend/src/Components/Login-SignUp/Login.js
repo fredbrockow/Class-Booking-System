@@ -43,7 +43,6 @@ const Login = () => {
             })
             .then((res) => res.json())
             .then((data) => {
-                console.log("data ", data);
                 
                 if(data.status === 200){
                     setUsername('');
@@ -63,7 +62,6 @@ const Login = () => {
             })
 
         } catch (err) {
-            console.log(err);
             setErrMsg('Login Failed');
         }
     }

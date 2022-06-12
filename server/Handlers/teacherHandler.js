@@ -80,7 +80,6 @@ const getTeacherByIdHandler = async (req, res) => {
 };
 
 const adminAddTeacherHandler = async (req, res) => {
-    console.log(req.body);
 
     const personInfo = req.body;
 

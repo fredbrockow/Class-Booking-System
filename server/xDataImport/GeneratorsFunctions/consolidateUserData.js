@@ -8,7 +8,6 @@ const generatedUsers = require('../data/generatedFragments/generatedUsersPartial
 
 const findUserbyId = (id, userArrList) => {
     return userArrList.find(user => {
-        // console.log(user.id);
         return user.id === id;
     });
 }
@@ -20,7 +19,6 @@ const findClassByUserId = (userId, week) => {
         
         for(let i = 1 ; i <= 6; ++i) {
             if(element[`slot${i}`] !== null){
-                // console.log(element[`slot${i}`]);
                 let classArr = element[`slot${i}`].student;
                 let aClass = classArr.find(id => userId === id);
 

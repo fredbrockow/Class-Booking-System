@@ -16,6 +16,17 @@ const classInfo_fields = [
     "isActive"
 ]
 
+const daysAllowed = [
+    "monday", 
+    "tuesday", 
+    "wednesday", 
+    "thursday", 
+    "friday", 
+    "saturday"
+];
+
+const slotsAllowed = ["slot1", "slot2", "slot3", "slot4", "slot5", "slot6"];
+
 /**
  * Test if a string contains only numbers
  * @param {*} string 
@@ -87,11 +98,7 @@ const classInfo_fields = [
             if(!classInfo.hasOwnProperty(`teacher`)){
                 isValid =false;
             }
-            // else {
-            //     if(typeof(classInfo[`teacher`]) !== 'number'){
-            //         isValid =false;
-            //     }
-            // }
+
             return;
         }
 
@@ -128,6 +135,41 @@ const classInfo_fields = [
     return isValid;
  }
 
+const validateClassToAddToCalendar = (classInfo) => {
+    let isValid = true;
+
+    if (!classInfo.hasOwnProperty ('dayName')){
+        isValid = false;
+        return;
+    }else if (
+        daysAllowed.find(day => day === classInfo.dayName) === undefined
+    ){
+        isValid = false;
+        return;
+    }
+    if (!classInfo.hasOwnProperty ('slotKey')){
+        isValid = false;
+        return;
+    }
+    else if (
+        slotsAllowed.find(slot => slot === classInfo.slotKey) === undefined
+    ){
+        isValid = false;
+        return;
+    }
+
+    if (!classInfo.hasOwnProperty (`class`)){
+        isValid = false;
+        return;
+    } else if (typeof (classInfo.class) !== 'string'){
+        isValid = false;
+        return;
+    }
+
+    return isValid;
+}
+
 module.exports = {
-    containsOnlyNumbers, validatePerson, validateClass
+    containsOnlyNumbers, validatePerson, validateClass,
+    validateClassToAddToCalendar
 }

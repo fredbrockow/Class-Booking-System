@@ -82,8 +82,7 @@ const getClassByIdHandler = async (req, res) => {
 const adminAddClassHandler = async (req, res) => {
 
     const classInfo = req.body;
-    console.log("classInfo ", classInfo);
-
+    
     if (!validateClass(classInfo)){
         res.status(400).json(
             {

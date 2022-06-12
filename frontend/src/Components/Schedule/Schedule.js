@@ -14,7 +14,6 @@ const Schedule = () => {
 
     const handleOnClick = (e, classInfo) => {
         e.stopPropagation();
-        console.log(classInfo);
         setSelectedClass(classInfo);
     }
 

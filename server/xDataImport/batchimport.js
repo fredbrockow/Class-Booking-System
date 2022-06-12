@@ -22,7 +22,6 @@ const insertDataBase = async (collection_name, data_to_insert) => {
     
         // connect to the database (db name is provided as an argument to the function)
         const db = client.db(DB_NAME);
-        console.log("connected!");
     
         //add datas
         const response = await db.collection(collection_name).insertMany(data_to_insert);
@@ -33,7 +32,6 @@ const insertDataBase = async (collection_name, data_to_insert) => {
     finally {
         // close the connection to the database server
         client.close();
-        console.log("disconnected!");
     }
 };
 

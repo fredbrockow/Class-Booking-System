@@ -17,7 +17,6 @@ const dbGetCalendar = async () => {
     
          // connect to the database (db name is provided as an argument to the function)
          const db = client.db(DB_NAME);
-         console.log("connected!");
 
          const response = await db.collection(CALENDAR_WEEK).find().toArray();
 
@@ -32,7 +31,6 @@ const dbGetCalendar = async () => {
     finally {
         // close the connection to the database server
         client.close();
-        console.log("disconnected!");
     }
 }
 

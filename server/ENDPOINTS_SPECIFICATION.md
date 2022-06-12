@@ -387,7 +387,7 @@ other codes:
     check if teacher assigned to the class exists 
     check if the class already exists (for title + teacher)
 
-    SET isActive to FALSE BY DEFAULT, SHOULD BE PUT TO TRUE WHEN THE CALL IS ADDED TO THE CALENDAR
+    SET isActive to TRUE BY DEFAULT. Ideally , in later version that flag will be used to remove the clsass from an active claendar , but not deleting it for re use
 
     SRC Picture set by default untill the upload picture fonctionnality is added
 
@@ -415,7 +415,7 @@ other codes:
         "teacher": "d143fcbb-edfe-46f6-8d81-54a6ca4c8387",
         "tag": "advanced",
         "capacity": 25,
-        "isActive": false
+        "isActive": true
     },
     "message": {
         "success": "request was successful"
@@ -430,6 +430,86 @@ other codes:
 **400** : a class with that title and teacher already exist
 
 **400** : error during the insertion in the database
+
+**400** : error bad format for the data sent (not present or undefined or null or not a string)
+
+**500** : internal server error
+
+
+<br/>
+
+## ADD A CLASS IN THE CALENDAR
+---
+
+- method **PATCH**
+- url **/admin/calendar**
+
+<br/>
+
+### Add a new class in the calendar
+    validation for all fields (must be present and be a string)
+    check if the class exists 
+    check if the Time Lsot is free before assigning the class to the calendar 
+
+
+### patch request format
+```json
+{
+    "dayName": "monday",
+    "class": "4c1cf09a-f50e-4baf-8524-c7d4fcb88baa",
+    "slotKey" : "slot4"
+}
+```
+### response format
+```json
+{
+    "status": 200,
+    "data": {
+        "_id": "62a53e032ca597afe80122d3",
+        "dayName": "monday",
+        "slot1": {
+            "class": "d53c55aa-2f0c-4af5-83cc-58515d5d87bc",
+            "student": [
+                ...data
+            ]
+        },
+        "slot2": {
+            "class": "ae2a78d2-2f4c-4d04-b058-521488255e33",
+            "student": [
+                ...data
+            ]
+        },
+        "slot3": {
+            "class": "441a4289-71b9-4e27-b3c2-c184926b9c26",
+            "student": [
+                ...data
+            ]
+        },
+        "slot4": {
+            "class": "4c1cf09a-f50e-4baf-8524-c7d4fcb88baa",
+            "student": []
+        },
+        "slot5": null,
+        "slot6": {
+            "class": "9c57a49f-9cc3-49b4-a56f-98710b1a9244",
+            "student": [
+                ...data
+            ]
+        }
+    },
+    "message": {
+        "success": "request was successfull"
+    }
+}
+```
+other codes:
+
+
+**400** : teh class doesn't exist
+
+**400** : the day in the claendar does not exist
+
+**400** : the time slot for that day is not free
 
 **400** : error bad format for the data sent (not present or undefined or null or not a string)
 

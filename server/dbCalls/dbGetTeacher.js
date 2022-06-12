@@ -22,7 +22,6 @@ const dbGetAllTeachers = async () => {
    
         // connect to the database (db name is provided as an argument to the function)
         const db = client.db(DB_NAME);
-        console.log("connected!");
 
         const response = await db.collection(TEACHERS).find().toArray();
 
@@ -37,13 +36,11 @@ const dbGetAllTeachers = async () => {
    finally {
        // close the connection to the database server
        client.close();
-       console.log("disconnected!");
    }
 };
 
 const dbGetTeacherById = async (teacherId) => {
     const client = getNewClient();
-    console.log("teacherId ", teacherId);
 
     try{  
         // connect to the client
@@ -51,7 +48,6 @@ const dbGetTeacherById = async (teacherId) => {
     
         // connect to the database (db name is provided as an argument to the function)
         const db = client.db(DB_NAME);
-        console.log("connected!");
         
         const response = await db.collection(TEACHERS).findOne({id:teacherId});
 
@@ -66,7 +62,6 @@ const dbGetTeacherById = async (teacherId) => {
     finally{
         // close the connection to the database server
         client.close();
-        console.log("disconnected!");
     }   
 }
 
