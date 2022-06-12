@@ -4,11 +4,11 @@ import styled from "styled-components";
 import BarCharts from './BarCharts';
 import { useState } from 'react';
 
-import { createUsersPerClass, usersPerClassColor } from "../DataSet/buildingDatas";
+import { createUsersPerClass, usersPerClassColor } from "./buildingDatas";
 
-const UsersPerClass = () => {
+const UsersPerClass = ( {yogaClasses , calendar}) => {
 
-    const classesData = createUsersPerClass();
+    const classesData = createUsersPerClass(yogaClasses , calendar);
 
     const [userData, setUserData] = useState({
         labels: classesData.keys.map((data) => data),

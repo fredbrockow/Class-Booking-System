@@ -13,6 +13,7 @@ const {
 const { getUniqueId } = require ('./db_utils');
 
 const dbAdminAddClass = async (classInfo) => {
+
     const client = getNewClient();
 
     try{

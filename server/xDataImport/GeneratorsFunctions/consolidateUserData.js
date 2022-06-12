@@ -5,6 +5,7 @@ const path = require('path');
 const week = require("../data/calendarWeek.json");
 const generatedUsers = require('../data/generatedFragments/generatedUsersPartials.json');
 
+
 const findUserbyId = (id, userArrList) => {
     return userArrList.find(user => {
         // console.log(user.id);
@@ -16,6 +17,7 @@ const findClassByUserId = (userId, week) => {
     arrClassResults = [];
 
     week.forEach(element => { 
+        
         for(let i = 1 ; i <= 6; ++i) {
             if(element[`slot${i}`] !== null){
                 // console.log(element[`slot${i}`]);
@@ -36,6 +38,7 @@ const findClassByUserId = (userId, week) => {
     return arrClassResults;
 }
 
+
 const getAllClassesForEachUsers = (usersArr, weekArr) => {
 
     arrResult = [];
@@ -51,8 +54,10 @@ const getAllClassesForEachUsers = (usersArr, weekArr) => {
     return arrResult;
 }
 
+
 const consolidateUserData = () => {
     let updatedUsersArray = getAllClassesForEachUsers(generatedUsers, week);
+    
     
     fs.writeFile(path.join(__dirname,'../','data','dbDataUsers.json'), JSON.stringify(updatedUsersArray), "utf-8", err => {
         if (err) {

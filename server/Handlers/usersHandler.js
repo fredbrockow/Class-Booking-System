@@ -1,12 +1,16 @@
-const {DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR} 
+const 
+{
+    DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR, 
+    BAD_DATA_FORMAT, CLASS_ALREADY_EXISTS, ERROR_INSERTING_CLASS,
+    TEACHER_DOES_NOT_EXIST
+} 
 = require("../configuration/errorMessages");
 
-const { dbGetCalendar } = require ('../dbCalls/dbGetCalendar.js');
+const { dbAdminGetUsers } = require('../dbCalls/dbAdminUsers');
 
-const getCalendarHandler = async (req, res) => {
-
+const adminGetAllUsersHandler = async (req, res) => {
     try{
-        const response = await dbGetCalendar();
+        const response = await dbAdminGetUsers();
         res.status(200).json(
             {
                 status: 200,
@@ -33,9 +37,9 @@ const getCalendarHandler = async (req, res) => {
                 }
             )
         }
-    }
+    }   
 };
 
 module.exports = {
-    getCalendarHandler
+    adminGetAllUsersHandler
 }

@@ -18,7 +18,7 @@ const getAllClassesHandler = async (req, res) => {
             {
                 status: 200,
                 data: response,
-                message: {sucess : SUCCESS}
+                message: {success : SUCCESS}
             }
         )
     }
@@ -47,24 +47,13 @@ const getClassByIdHandler = async (req, res) => {
     
     const classId = req.params.classId;
 
-    if (!containsOnlyNumbers(classId)){
-        res.status(404).json(
-            {
-                status: 404,
-                data: {classId},
-                message: {error : DATA_NOT_FOUND}
-            }
-        )
-        return;
-    }
-
     try {
-        const response = await dbGetClassById(parseInt(classId));
+        const response = await dbGetClassById(classId);
         res.status(200).json(
             {
                 status: 200,
                 data: response,
-                message: {sucess : SUCCESS}
+                message: {success : SUCCESS}
             }
         )
     }
@@ -91,9 +80,9 @@ const getClassByIdHandler = async (req, res) => {
 };
 
 const adminAddClassHandler = async (req, res) => {
-    // console.log(req.body);
 
     const classInfo = req.body;
+    console.log("classInfo ", classInfo);
 
     if (!validateClass(classInfo)){
         res.status(400).json(
@@ -111,7 +100,7 @@ const adminAddClassHandler = async (req, res) => {
                 {
                     status: 200,
                     data: response,
-                    message: {sucess : SUCCESS}
+                    message: {success : SUCCESS}
                 }
             )
         }

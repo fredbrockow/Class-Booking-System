@@ -3,6 +3,7 @@ const path = require('path');
 
 const teachers = require("../baseData/teachers.json");
 
+
 const getTeachersIds = (teacherList) => {
     let arrResult = [];
 

@@ -3,14 +3,14 @@ require("dotenv").config();
 const {
     DB_NAME, USERS, YOGA_CLASSES, CALENDAR_WEEK, TEACHERS,
     getNewClient
-}= require('../configuration/dbConfig');
+}= require('./configuration/dbConfig');
 
 const usersData = require('./data/dbDataUsers.json');
 const calendarWeek = require('./data/calendarWeek.json');
 const teachers = require('./baseData/teachers.json');
 const yogaClasses = require('./baseData/yogaClass.json');
 
-const { MONGO_URI } = process.env;
+// const { MONGO_URI } = process.env;
 
 
 const insertDataBase = async (collection_name, data_to_insert) => {

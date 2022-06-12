@@ -12,9 +12,6 @@ app.use(express.json())
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
 
-// Test Route
-app.use('/server', require('./routers/testRoutes'));
-
 // Roles Routes
 app.use('/login', require('./routers/auth'));
 app.use("/users", require('./routers/users/users'));
@@ -26,6 +23,24 @@ app.use('/class', require('./routers/class') );
 
 // Calendar Routes
 app.use('/calendar', require('./routers/calendar'));
+
+app.post('/testform', (req,res) => {
+
+    if(true){
+        res.status(200).json({
+            status: 200,
+            data: req.body,
+            message: {success:"teacher added to the database"}
+        });
+    }else{
+        res.status(400).json({
+            status: 400,
+            data: req.body,
+            message: {error:"somekind of error"}
+        });
+
+    }
+})
 
 // 404
 app.all('*', (req, res) => {

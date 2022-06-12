@@ -87,11 +87,11 @@ const classInfo_fields = [
             if(!classInfo.hasOwnProperty(`teacher`)){
                 isValid =false;
             }
-            else {
-                if(typeof(classInfo[`teacher`]) !== 'number'){
-                    isValid =false;
-                }
-            }
+            // else {
+            //     if(typeof(classInfo[`teacher`]) !== 'number'){
+            //         isValid =false;
+            //     }
+            // }
             return;
         }
 

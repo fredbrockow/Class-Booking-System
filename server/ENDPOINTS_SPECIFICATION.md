@@ -25,7 +25,7 @@
             }
         }
     ],
-    "message": {"sucess": "request was successfull"}
+    "message": {"success": "request was successfull"}
 }
 ```
 
@@ -53,7 +53,7 @@ other codes:
     "status": 200,
     "data": [
         {
-            "id": 82185528,
+            "id": "0a4a7dd2-406b-4065-906e-33b6de63d450",
             "firstName": "Mathilde",
             "lastName": "Racicot",
             "username": "mathilde.racicot",
@@ -61,7 +61,7 @@ other codes:
             "phoneNumber": "+94 159-980-4932 x9475"
         },
         {
-            "id": 45507237,
+            "id": "0a3949f2-8575-4eaf-8327-7722e05637af",
             "firstName": "Sebastien",
             "lastName": "Tremblay",
             "username": "sebastien.tremblay",
@@ -69,7 +69,7 @@ other codes:
             "phoneNumber": "+809 1-543-492-6989 x5744"
         }
     ],
-    "message": {"sucess": "request was successfull"}
+    "message": {"success": "request was successfull"}
 }
 ```
 other codes:
@@ -91,7 +91,7 @@ other codes:
 {
     "status": 200,
     "data": {
-        "id": 45507237,
+        "id": "0a3949f2-8575-4eaf-8327-7722e05637af",
         "firstName": "Sebastien",
         "lastName": "Tremblay",
         "username": "sebastien.tremblay",
@@ -99,7 +99,7 @@ other codes:
         "phoneNumber": "+809 1-543-492-6989 x5744"
     },
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successfull"
     }
 }
 ```
@@ -126,17 +126,17 @@ other codes:
     "status": 200,
     "data": [
         {
-            "id": 123456,
+            "id": "4c1cf09a-f50e-4baf-8524-c7d4fcb88baa",
             "title": "Pilates",
             "imgSrc": "/public/Hatha.jpg",
             "description": "Pilates is a form of fitness that strengthens the deep muscles of the mid-body to support movement and resist environmental pressures. Pilates stretches and lengthens the major muscles of the body by correcting imbalances. It improves flexibility, strength, balance and body awareness.",
-            "teacher": 82185528,
+            "teacher": "0a4a7dd2-406b-4065-906e-33b6de63d450",
             "tag": "advanced",
             "capacity": 25,
             "isActive": true
         },
         {
-            "id": 234567,
+            "id": "441a4289-71b9-4e27-b3c2-c184926b9c26",
             "title": "Hatha Yoga",
             "imgSrc": "/public/Hatha.jpg",
             "description": "Learning to align and breathe well in a yoga posture is fundamental! If you are well aligned, the effects of the postures will be more profound and will make your practice more effective. These are the ideal classes to deepen your understanding of the postures and to build towards a more advanced practice.",
@@ -146,7 +146,7 @@ other codes:
             "isActive": true
         }
     ],
-    "message": {"sucess": "request was successfull"}
+    "message": {"success": "request was successfull"}
 }
 ```
 other codes:
@@ -168,17 +168,17 @@ other codes:
 {
     "status": 200,
     "data": {
-        "id": 123456,
+        "id": "4c1cf09a-f50e-4baf-8524-c7d4fcb88baa",
         "title": "Pilates",
         "imgSrc": "/public/Hatha.jpg",
         "description": "Pilates is a form of fitness that strengthens the deep muscles of the mid-body to support movement and resist environmental pressures. Pilates stretches and lengthens the major muscles of the body by correcting imbalances. It improves flexibility, strength, balance and body awareness.",
-        "teacher": 82185528,
+        "teacher": "0a4a7dd2-406b-4065-906e-33b6de63d450",
         "tag": "advanced",
         "capacity": 25,
         "isActive": true
     },
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successfull"
     }
 }
 ```
@@ -216,7 +216,7 @@ params: <br/>
 {
     "status": 200,
     "data": {
-        "id": 1111,
+        "id": "0a4a7dd2-406b-4065-906e-33b6de63d450",
         "firstName": "userFirstName",
         "lastName": "userLastName",
         "username": "user",
@@ -242,6 +242,82 @@ other codes:
 <br/>
 
 # ADMIN ROUTES
+
+<br/>
+
+## GET ALL USERS
+---
+
+- method **GET**
+- url **/admin/users**
+
+<br/>
+
+### get all the users in the database
+    used for admin panel only
+
+### response format
+```json
+{
+    "status": 200,
+    "data": [
+        {
+            "id": "0a4a7dd2-406b-4065-906e-33b6de63d450",
+            "firstName": "userFirstName",
+            "lastName": "userLastName",
+            "username": "user",
+            "email": "userFirstName.userLastName@email.com",
+            "phoneNumber": "+11 111-111-111 x11111",
+            "dateOfBirth": "1111-11-11",
+            "roles": [
+                123456789
+            ],
+             "classes": [
+                {
+                    "dayName": "monday",
+                    "slot": "slot1",
+                    "classId": "4c1cf09a-f50e-4baf-8524-c7d4fcb88baa"
+                },
+                {
+                    "dayName": "tuesday",
+                    "slot": "slot5",
+                    "classId": "ae2a78d2-2f4c-4d04-b058-521488255e33"
+                },
+                {
+                    "dayName": "wednesday",
+                    "slot": "slot1",
+                    "classId":  "fe569627-f223-4463-b0ba-f71b6fe01491",
+                },
+                {
+                    "dayName": "wednesday",
+                    "slot": "slot5",
+                    "classId": "4c1cf09a-f50e-4baf-8524-c7d4fcb88baa"
+                },
+                {
+                    "dayName": "friday",
+                    "slot": "slot4",
+                    "classId": "ae2a78d2-2f4c-4d04-b058-521488255e33"
+                },
+                {
+                    "dayName": "saturday",
+                    "slot": "slot4",
+                    "classId": "6bcd5576-00ed-460a-b2d3-15f034ff41c2"
+                }
+            ]
+        },
+        {..other Users},
+    ],
+    "message": {
+        "success": "request was successfull"
+    }
+}
+```
+other codes:
+
+
+**404** : not found
+
+**500** : internal server error
 
 <br/>
 
@@ -281,7 +357,7 @@ other codes:
         "phoneNumber": "+54 461.977.2168 x7751"
     },
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successfull"
     }
 }
 ```
@@ -306,7 +382,7 @@ other codes:
 
 <br/>
 
-### Add a new classin the database
+### Add a new class in the database
     validation for all fields (must be present and be a string or number or boolean depending on the field)
     check if teacher assigned to the class exists 
     check if the class already exists (for title + teacher)
@@ -336,13 +412,13 @@ other codes:
         "src": "/public/Hatha.jpg",
         "title": "New Class",
         "description": "this is a description of that new class",
-        "teacher": 82185528,
+        "teacher": "d143fcbb-edfe-46f6-8d81-54a6ca4c8387",
         "tag": "advanced",
         "capacity": 25,
         "isActive": false
     },
     "message": {
-        "sucess": "request was successfull"
+        "success": "request was successful"
     }
 }
 ```

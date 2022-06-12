@@ -1,3 +1,4 @@
+const fetch = require("node-fetch");
 const fsPromises = require('fs').promises;
 const path = require('path');
 

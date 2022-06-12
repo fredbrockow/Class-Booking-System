@@ -4,12 +4,14 @@ const getARandomNumber = (range) => {
     return (Math.floor(Math.random() * range +1 ));
 }
 
+
 const getArrayOfUniqueRandomNumber = (length, range) => {
     let arrResult = [];
 
     if (length > range){
         return [];
     }
+
 
     for (let i = 0; i < length; ++i) {
         let number = getARandomNumber (range);

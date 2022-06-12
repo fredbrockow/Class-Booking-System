@@ -14,6 +14,7 @@ const Schedule = () => {
 
     const handleOnClick = (e, classInfo) => {
         e.stopPropagation();
+        console.log(classInfo);
         setSelectedClass(classInfo);
     }
 
@@ -33,6 +34,7 @@ const Schedule = () => {
                 .then(res => res.json())
                 .then((res) => {
                     if(res.status === 200){
+
                         setCalendar(res.data);
                     }
                     else{
@@ -71,8 +73,6 @@ const Schedule = () => {
 
     }, []);
 
-    // console.log("calendar ", calendar);
-    // console.log("yoga classes ", yogaClass);
 
     return (
         <Styled.Wrapper>

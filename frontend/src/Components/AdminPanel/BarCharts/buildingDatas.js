@@ -1,7 +1,3 @@
-const yogaClasses = require ("./yogaClass.json");
-const calendar = require("./calendarWeek.json");
-const dbUsers = require("./dbUsers.json");
-const teachers = require("./teachers.json");
 
 export const classHours = [
     "9h00 to 10h30",    //slot1
@@ -29,21 +25,27 @@ export const usersPerClassColor = {
 
 };
 
-const getTeacherById = (teacherId) => {
-    const teacherObj = {};
+/**
+ *  I may need this later
+ * @param {*} teacherId 
+ * @returns 
+ */
 
-    teachers.forEach((teacher) => {
-        if (teacher.id === teacherId){
-            teacherObj.firstName = teacher.firstName;
-            teacherObj.lastName = teacher.lastName;
-            return;
-        }
-    })
+// const getTeacherById = (teacherId) => {
+//     const teacherObj = {};
 
-    return {...teacherObj};
-}
+//     teachers.forEach((teacher) => {
+//         if (teacher.id === teacherId){
+//             teacherObj.firstName = teacher.firstName;
+//             teacherObj.lastName = teacher.lastName;
+//             return;
+//         }
+//     })
 
-const getClassById = (classId) => {
+//     return {...teacherObj};
+// }
+
+const getClassById = (classId, yogaClasses) => {
     let classTarget = {};
 
     yogaClasses.forEach(aClass => {
@@ -57,7 +59,7 @@ const getClassById = (classId) => {
     return classTarget;
 };
 
-export const createUsersPerDayDataSet = () => {
+export const createUsersPerDayDataSet = (calendar) => {
     const keys = [];
     const ObjArr = {
         slot1: [],
@@ -83,7 +85,7 @@ export const createUsersPerDayDataSet = () => {
     return {keys,data:ObjArr};
 };
 
-export const createUsersPerClass = () => {
+export const createUsersPerClass = (yogaClasses , calendar) => {
 
     const keys = [];
     const objClasses= {};
@@ -99,7 +101,7 @@ export const createUsersPerClass = () => {
 
         for (let i = 1 ; i<=6; ++i){
             if(day[`slot${i}`]!== null){
-                let yogaClass = getClassById (day[`slot${i}`].class);
+                let yogaClass = getClassById (day[`slot${i}`].class, yogaClasses);
 
                 if( objClasses.hasOwnProperty(`${yogaClass.title}`)){
                     objClasses[`${yogaClass.title}`].numOfStudent += day[`slot${i}`].student.length;
