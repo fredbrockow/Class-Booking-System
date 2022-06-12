@@ -30,7 +30,7 @@ app.post('/testform', (req,res) => {
         res.status(200).json({
             status: 200,
             data: req.body,
-            message: {success:"teacher added to the database"}
+            message: {success:"something has been added to the database"}
         });
     }else{
         res.status(400).json({

@@ -61,6 +61,10 @@ const dbAdminAddClass = async (classInfo) => {
     catch (err) {
         throw err;
     }
+    finally {
+        // close the connection to the database server
+        client.close();
+    }
 }
 
 module.exports = {
