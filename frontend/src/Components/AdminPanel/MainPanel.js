@@ -79,7 +79,7 @@ const MainPanel = () => {
                 {teachers && yogaClasses && calendar ?
                     <Routes>
                         <Route path= "/editTeachers" element = {<EditTeachers teachers = {teachers} setTeachers = {setTeachers}/>}/>
-                        <Route path= "/editClasses" element = {<EditClasses/>}/>
+                        <Route path= "/editClasses" element = {<EditClasses teachers = {teachers} classes = {yogaClasses} setClasses = {setYogaClasses}/>}/>
                         <Route path= "/editCalendar" element = {<EditCalendar/>}/>
                         <Route path= "/usersPerWeek" element = {<UsersPerWeek calendar = {calendar}/>}/>
                         <Route path= "/usersPerClass" element = {<UsersPerClass calendar = {calendar} yogaClasses = {yogaClasses}/>}/>

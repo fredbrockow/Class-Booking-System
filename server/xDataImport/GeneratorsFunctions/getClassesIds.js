@@ -3,6 +3,7 @@ const path = require('path');
 
 const classes = require("../baseData/yogaClass.json");
 
+
 const getClassesIds = (classesList) => {
     let arrResult = [];
 
@@ -12,6 +13,7 @@ const getClassesIds = (classesList) => {
 
     return arrResult;
 }
+
 
 const generateClassesIds = async () => {
     arrClassesIds = getClassesIds(classes);

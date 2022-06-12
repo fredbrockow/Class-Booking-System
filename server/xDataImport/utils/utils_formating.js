@@ -1,6 +1,6 @@
 const formatUser = (data) => {
     user = {
-        id: data.id,
+        id: data.uid,
         firstName: data.first_name,
         lastName: data.last_name,
         username: data.username,

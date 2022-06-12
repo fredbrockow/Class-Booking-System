@@ -1,5 +1,6 @@
 
 const getClassById = (classId, yoga_classes) => {
+
     let classTarget = {};
 
     yoga_classes.forEach(aClass => {

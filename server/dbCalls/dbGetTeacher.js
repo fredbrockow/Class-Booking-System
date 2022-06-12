@@ -43,6 +43,7 @@ const dbGetAllTeachers = async () => {
 
 const dbGetTeacherById = async (teacherId) => {
     const client = getNewClient();
+    console.log("teacherId ", teacherId);
 
     try{  
         // connect to the client

@@ -26,7 +26,7 @@ app.use('/calendar', require('./routers/calendar'));
 
 app.post('/testform', (req,res) => {
 
-    if(false){
+    if(true){
         res.status(200).json({
             status: 200,
             data: req.body,

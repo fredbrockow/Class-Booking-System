@@ -1,4 +1,4 @@
-// const fetch = require("node-fetch");
+const fetch = require("node-fetch");
 const fsPromises = require('fs').promises;
 const path = require('path');
 
@@ -29,8 +29,9 @@ const generateUsers = async (number) => {
     for (let i = number ; i > 0 ; --i) {
         let user = await getUser();
         arrUsers.push(formatUser(user));
-        usersId.push(user.id)
+        usersId.push(user.uid)
     }
+    // console.log(arrUser);
     return {users:arrUsers, ids:usersId};
 }
 
@@ -51,6 +52,7 @@ const generateUsersFragmentsAndIds = async (numOfUsers) => {
 
     console.log("done generating users and users ids");
 }
+
 
 module.exports = {
     generateUsersFragmentsAndIds

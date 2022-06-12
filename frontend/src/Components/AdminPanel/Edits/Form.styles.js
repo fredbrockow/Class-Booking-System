@@ -39,9 +39,30 @@ const SuccessSection = styled.div`
     }
 `;
 
+const TextArea = styled.textarea`
+    background-color: lightgray;
+    border: none;
+    outline: none;
+    resize: none;
+`;
+const Select = styled.select`
+    cursor: pointer;
+    border-color: red;
+    background-color: lightgray;
+    color: red;
+    min-width:40px;
+    text-align: center;
+
+    & option {
+        color: blue;
+        background-color: yellow;
+        /* text-align: left; */
+    }
+`;
+
 export {
     Wrapper,
-    Form, Label, Input, Title,
+    Form, Label, Input, Title, TextArea, Select,
     SubmitButton,
     ErrorSection, SuccessSection
 }

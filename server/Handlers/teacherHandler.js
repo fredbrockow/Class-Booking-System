@@ -7,7 +7,7 @@ const
 
 const { dbGetAllTeachers, dbGetTeacherById } = require('../dbCalls/dbGetTeacher');
 const {dbAdminAddTeacher} = require('../dbCalls/dbAdminTeacher')
-const { containsOnlyNumbers, validatePerson } = require('./handlers.utils');
+const { validatePerson } = require('./handlers.utils');
 
 const getAllTeachersHandler = async (req, res) => {
     
@@ -47,19 +47,8 @@ const getTeacherByIdHandler = async (req, res) => {
     
     const teacherId = req.params.teacherId;
 
-    if (!containsOnlyNumbers(teacherId)){
-        res.status(404).json(
-            {
-                status: 404,
-                data: {teacherId},
-                message: {error : DATA_NOT_FOUND}
-            }
-        )
-        return;
-    }
-
     try {
-        const response = await dbGetTeacherById(parseInt(teacherId));
+        const response = await dbGetTeacherById(teacherId);
         res.status(200).json(
             {
                 status: 200,
