@@ -3,18 +3,97 @@ import Calendar from "./Calendar/Calendar";
 import ClassLabels from "./ClassLabels";
 import ClassCard from "./ClassCard/ClassCard";
 
-import { useState, useEffect, useCallback } from "react";
+import { useNavigate} from "react-router-dom";
+import { useContext,useState, useEffect, useCallback } from "react";
+import  AuthContext from "../../Context/AuthProvider"
+
+import { isObjectEmpty, slot_to_hours, hours_to_slot } from "../../utils";
 
 
 const Schedule = () => {
+    const navigate = useNavigate();
+    const {auth, setAuth} = useContext(AuthContext);
 
     const [calendar, setCalendar] = useState();
     const [yogaClass, setYogaClass]= useState()
     const [selectedClass, setSelectedClass] = useState(null);
 
+
+    const sortCalendar = (calendar) => {
+        const sortingArr = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        const sortedCalendar = [];
+
+        sortingArr.forEach (day => {
+            sortedCalendar.push(
+                calendar.find(element => element.dayName === day)
+            ) 
+        })
+        return sortedCalendar;
+    }
+
+    const updateCalendar = (data, dayName) => {
+
+        const newCalendar = calendar.filter(day => day.dayName !== dayName);
+        newCalendar.push(data);
+        const sortedCalendar = sortCalendar(newCalendar);
+        setCalendar([...sortedCalendar]);
+    };
+
+    const updateUser = (data) => {
+        const newClassArr = auth.classes;
+        newClassArr.push(data);
+        setAuth({...auth, classes: newClassArr});
+    }
+
     const handleOnClick = (e, classInfo) => {
         e.stopPropagation();
         setSelectedClass(classInfo);
+    }
+
+    const handleOnClickEnroll = async (e , classSelected) => {
+        e.stopPropagation();
+
+        if (isObjectEmpty(auth)){
+            navigate("/login");
+        }
+        else{
+
+            // console.log(classSelected);
+            // console.log('conversion attempt ', hours_to_slot[classSelected.hours]);
+
+            try {
+                await fetch('/users/addClass', {
+                    method: 'PATCH',
+                    headers: { 
+                        'Content-Type': 'application/json' 
+                            },
+                    credentials: 'include',
+    
+                    body: JSON.stringify(
+                    {
+                        userId: auth.id,
+                        classId : classSelected.id,
+                        dayName: classSelected.dayName,
+                        slotKey: hours_to_slot[classSelected.hours]
+                    })
+                })
+                .then((res) => res.json())
+                .then((data) => {
+                    if(data.status === 200){
+                        console.log("data.data ", data.data);
+                        updateCalendar(data.data.calendar, classSelected.dayName);
+                        updateUser (data.data.user);
+
+                    }
+                    else{
+                        // setErrMsg(data.message.error);
+                    }
+                })
+    
+            } catch (err) {
+                // setErrMsg('Adding Class Failed');
+            }
+        }
     }
 
     const handleDeselectOnClick = useCallback((e) => {
@@ -24,7 +103,6 @@ const Schedule = () => {
     useEffect(() => {
         const calendarUrl = "/calendar";
         const classesUrl = "/class";
-
 
         const getCalendar = async (calendarUrl, classesUrl) => {
 
@@ -87,7 +165,7 @@ const Schedule = () => {
                     <Styled.RightSideWrapper>
                         <ClassLabels />
                         {selectedClass !== null ?
-                        <ClassCard selectedClass= {selectedClass}/>
+                        <ClassCard selectedClass= {selectedClass} handleOnClick = {handleOnClickEnroll}/>
                         :
                         "no class Selected"
                         }

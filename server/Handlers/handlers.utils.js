@@ -169,7 +169,53 @@ const validateClassToAddToCalendar = (classInfo) => {
     return isValid;
 }
 
+const validateAddClass = (classInfo) => {
+    let isValid = true;
+
+    if (!classInfo.hasOwnProperty ('dayName')){
+        isValid = false;
+        return;
+    }
+    else if (
+        daysAllowed.find(day => day === classInfo.dayName) === undefined
+    ){
+        isValid = false;
+        return;
+    }
+
+    if (!classInfo.hasOwnProperty ('slotKey')){
+        isValid = false;
+        return;
+    }
+    else if (
+        slotsAllowed.find(slot => slot === classInfo.slotKey) === undefined
+    ){
+        isValid = false;
+        return;
+    }
+
+    if (!classInfo.hasOwnProperty ('userId')){
+        isValid = false;
+        return;
+    }
+    else if(typeof (classInfo.userId) !== 'string'){
+        isValid = false;
+        return;
+    }
+
+    if (!classInfo.hasOwnProperty ('classId')){
+        isValid = false;
+        return;
+    }
+    else if(typeof (classInfo.classId) !== 'string'){
+        isValid = false;
+        return;
+    }
+
+    return isValid;
+}
+
 module.exports = {
     containsOnlyNumbers, validatePerson, validateClass,
-    validateClassToAddToCalendar
+    validateClassToAddToCalendar, validateAddClass
 }

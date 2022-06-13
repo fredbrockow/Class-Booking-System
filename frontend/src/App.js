@@ -9,13 +9,21 @@ import RequireAuth from "./Components/RequireAuth";
 
 import GlobalStyles from "./GlobalStyles";
 import Layout from "./Components/Layout/Layout";
+
+/* public*/
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login-SignUp/Login";
 import AboutUs from "./Components/AboutUs/AboutUs";
-
-import UserClass from "./Components/UserClass/UserClass";
 import Schedule from "./Components/Schedule/Schedule";
+import Page404 from "./Components/Page404/Page404";
 
+/*User*/
+import UserPanel from "./Components/UserPanel/UserPanel";
+import UserSidePanel from "./Components/UserPanel/UserSidePanel";
+import UserProfile from "./Components/UserPanel/UserProfile";
+import UserClass from "./Components/UserPanel/UserClass";
+
+/*Admin*/
 import AdminPanel from "./Components/AdminPanel/AdminPanel";
 import UsersPerWeek from "./Components/AdminPanel/BarCharts/UsersPerWeek";
 import UsersPerClass from "./Components/AdminPanel/BarCharts/UsersPerClass";
@@ -23,7 +31,6 @@ import EditTeachers from "./Components/AdminPanel/Edits/EditTeachers";
 import EditClasses from "./Components/AdminPanel/Edits/EditClasses";
 import EditCalendar from "./Components/AdminPanel/Edits/EditCalendar";
 
-import Page404 from "./Components/Page404/Page404";
 
 
 /**
@@ -42,37 +49,51 @@ function App() {
       <Router>
         <GlobalStyles/>
         <Routes>
-          <Route path="/" element={<Layout/>}>
+          <Route path="/" element={<Layout/>} >
                 
                 {/* Public Routes */}
-                <Route index element={<Home/>}/>
-                <Route path="schedule" element={<Schedule/>}/>
-                <Route path="login" element={<Login/>}/>
-                <Route path="about" element={<AboutUs/>}/>
+                <Route index element={<Home/>} />
+                <Route path="schedule" element={<Schedule/>} />
+                <Route path="login" element={<Login/>} />
+                <Route path="about" element={<AboutUs/>} />
 
                 {/* protected users Routes */}
-                <Route element={<RequireAuth allowedRoles = {[ROLES.user, ROLES.admin]}/> } >
-                    <Route path="myClass" element={<UserClass/>}/>
+                {/* <Route element={<RequireAuth allowedRoles = {[ROLES.user, ROLES.admin]}/>} >
+                    <Route path="myClass" element={<UserClass/>} />
+                </Route> */}
+                
+                <Route path="user" element={<UserPanel/>} >
+                  <Route index element={<UserProfile/>} />
+                  <Route path="userProfile" element={<UserProfile/>} />
+                  <Route path="userClass" element={<UserClass/>} />
                 </Route>
+                
+
+
+
 
                 {/* protected admin Routes */}
-                {/* <Route element={<RequireAuth allowedRoles = {[ROLES.admin]}/> } >
-                  <Route path="admin" element={<AdminPanel/>}/>
-                </Route> */}
+                <Route element={<RequireAuth allowedRoles = {[ROLES.admin]}/> } >
+                  <Route path="admin//*" element={<AdminPanel/>} >
+                    <Route path= "editTeachers" element = {<EditTeachers/>} /> 
+                    <Route path= "editClasses" element = {<EditClasses/>} /> 
+                    <Route path= "editCalendar" element = {<EditCalendar/>} /> 
+                    <Route path= "usersPerWeek" element = {<UsersPerWeek/>} /> 
+                    <Route path= "usersPerClass" element = {<UsersPerClass/>} />
+                  </Route>
+                </Route>
                   
                   
                   {/* FOR TEST ONLY NEED TO BE BACK IN THE PROTECTED AREA ONCE DONE */}
-                  <Route path="admin//*" element={<AdminPanel/>}>
-                    <Route path= "editTeachers" element = {<EditTeachers/>}/> 
-                    <Route path= "editClasses" element = {<EditClasses/>}/> 
-                    <Route path= "editCalendar" element = {<EditCalendar/>}/> 
-                    <Route path= "usersPerWeek" element = {<UsersPerWeek/>}/> 
-                    <Route path= "usersPerClass" element = {<UsersPerClass/>}/>
-                  </Route>
+                  {/* <Route path="admin//*" element={<AdminPanel/>} >
+                    <Route path= "editTeachers" element = {<EditTeachers/>} /> 
+                    <Route path= "editClasses" element = {<EditClasses/>} /> 
+                    <Route path= "editCalendar" element = {<EditCalendar/>} /> 
+                    <Route path= "usersPerWeek" element = {<UsersPerWeek/>} /> 
+                    <Route path= "usersPerClass" element = {<UsersPerClass/>} />
+                  </Route> */}
                 
-                {/* To ping the server DELETE ME */}
-
-                <Route path="*" element={<Page404/>}/>
+                <Route path="*" element={<Page404/>} />
                 
           </Route>
         </Routes>

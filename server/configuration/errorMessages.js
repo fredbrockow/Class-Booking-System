@@ -30,10 +30,18 @@ const CALENDAR_DAY_ISSUE = "there was a problem retrieving the day in that Calen
 
 const CALENDAR_TIME_SLOT_ISSUE = "there is already a Class assigned to that Time Slot for that day in the Calendar";
 
+const CALENDAR_NO_CLASS_SLOT = "there is no Class assigned to that Time Slot";
+
+const CALENDAR_NO_MATCH_CLASS = "the Class for that time slot doesn't match the request";
+
+const CLASS_IS_FULL = "the selected class is full";
+
+const ALREADY_REGISTER_IN_CLASS = "already enrolled in that class";
 
 module.exports = {
     DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR, 
     BAD_DATA_FORMAT, ALREADY_EXISTS, ERROR_INSERTING_TEACHER,
     ERROR_INSERTING_CLASS, TEACHER_DOES_NOT_EXIST, CLASS_ALREADY_EXISTS,
-    CLASS_DOES_NOT_EXISTS, CALENDAR_DAY_ISSUE, CALENDAR_TIME_SLOT_ISSUE
+    CLASS_DOES_NOT_EXISTS, CALENDAR_DAY_ISSUE, CALENDAR_TIME_SLOT_ISSUE, 
+    CALENDAR_NO_CLASS_SLOT, CALENDAR_NO_MATCH_CLASS, CLASS_IS_FULL, ALREADY_REGISTER_IN_CLASS
 }

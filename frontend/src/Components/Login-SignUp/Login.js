@@ -53,7 +53,8 @@ const Login = () => {
                     // const roles = response?.data?.roles;
                     
                     // setAuth({ username, pwd, roles, accessToken });
-                    setAuth({username, pwd, roles: data.data.roles});
+                    console.log(data.data);
+                    setAuth({...data.data });
                     navigate(from, { replace: true });
                 }
                 else if (data.status === 404){
