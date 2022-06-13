@@ -7,10 +7,10 @@ const UserPanel = () => {
     return (
         <Styled.Wrapper>
             <UserSidePanel/>
-            <Styled.MainPanel>
+            <Styled.MainUserPanel>
                 <Styled.Title>THIS IS THE USER PANEL</Styled.Title>
                 <Outlet/>
-            </Styled.MainPanel>
+            </Styled.MainUserPanel>
         </Styled.Wrapper>
     );
 };

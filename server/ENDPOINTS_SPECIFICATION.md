@@ -1,4 +1,6 @@
 # ENDPOINTS SPECIFICATION
+
+<br/>
 <br/>
 
 ## GET CALENDAR
@@ -240,8 +242,11 @@ other codes:
 **500** : internal server error
 
 <br/>
+<br/>
 
 # USERS ROUTES
+
+<br/>
 
 ## ADD A CLASS TO USER (ENROLL)
 ---
@@ -326,7 +331,60 @@ other codes:
 
 **500** : internal server error
 
+<br/>
 
+## ADD A CLASS TO USER (ENROLL)
+---
+- method **PATCH**
+- url **/users/class**
+
+### enroll a user in a class , updates the calendar accordingly
+    check if all required fields are sent + proper format (string)
+    check if the class exists
+    check if that class is assigned to that day for that time slot
+    check if the user is enrolled to that class for that time and day
+
+### patch request format
+```json
+{
+    "classId": "6bcd5576-00ed-460a-b2d3-15f034ff41c2",
+    "dayName": "thursday",
+    "slotKey": "slot3",
+    "userId": "111111111-1111-111111111-11-111111111"
+}
+```
+### response format
+```json
+{
+    "status": 200,
+    "data": [
+        {
+            "dayName": "thursday",
+            "slot": "slot2",
+            "classId": "6bcd5576-00ed-460a-b2d3-15f034ff41c2"
+        }
+    ],
+    "message": {
+        "success": "request was successfull"
+    }
+}
+```
+    the data is the updated class list for the user
+
+other codes:
+
+
+**400** : there is not class for this time slot
+
+**400** : there is not a match for the class for that time slot
+
+**400** : user is not enrolled in that class
+
+**400** : error bad format for the data sent (not present or undefined or null or not a string)
+
+**500** : internal server error
+
+<br/>
 <br/>
 
 # ADMIN ROUTES

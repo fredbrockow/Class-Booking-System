@@ -61,14 +61,21 @@ function App() {
                 {/* <Route element={<RequireAuth allowedRoles = {[ROLES.user, ROLES.admin]}/>} >
                     <Route path="myClass" element={<UserClass/>} />
                 </Route> */}
-                
-                <Route path="user" element={<UserPanel/>} >
+
+                {/* protected users Routes */}
+                <Route element={<RequireAuth allowedRoles = {[ROLES.user, ROLES.admin]}/>} >
+                  <Route path="user" element={<UserPanel/>} >
+                    <Route index element={<UserProfile/>} />
+                    <Route path="userProfile" element={<UserProfile/>} />
+                    <Route path="userClass" element={<UserClass/>} />
+                  </Route>
+                </Route>
+
+                {/* <Route path="user" element={<UserPanel/>} >
                   <Route index element={<UserProfile/>} />
                   <Route path="userProfile" element={<UserProfile/>} />
                   <Route path="userClass" element={<UserClass/>} />
-                </Route>
-                
-
+                </Route> */}
 
 
 
