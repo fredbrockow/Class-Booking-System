@@ -1,6 +1,7 @@
 import * as Styled from "./Calendar.styles";
 
 import { getClassById, classHours } from "./calendar.utils";
+import { slot_to_hours, hours_to_slot } from "../../../utils";
 
 const Calendar = (props) => {
 
@@ -48,7 +49,8 @@ const Calendar = (props) => {
                                             onClick = {(e)=> handleOnClick(e, {
                                                 classSelected: aClass,
                                                 day: day.dayName,
-                                                hours:classHours[index]
+                                                hours:slot_to_hours[key],
+                                                attending : day[key].student.length
                                             })}
                                             key= {`lkdhfjkhjkshdf_${day.dayName}sdfnjkhkjhdsf_${index}`}
                                         >

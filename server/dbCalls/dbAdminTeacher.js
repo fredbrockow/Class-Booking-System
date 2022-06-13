@@ -18,7 +18,6 @@ const dbAdminAddTeacher = async (teacherInfo) => {
     try{
         await client.connect();
         const db = client.db(DB_NAME);
-        console.log("connected!");
 
         const foundTeacher = await db.collection(TEACHERS).findOne(
             { $or: [
@@ -46,6 +45,10 @@ const dbAdminAddTeacher = async (teacherInfo) => {
     }
     catch (err) {
         throw err;
+    }
+    finally {
+        // close the connection to the database server
+        client.close();
     }
 }
 

@@ -15,7 +15,7 @@
         "imgSrc": "/public/Hatha.jpg",
         "description": "Learning to align and breathe well in a yoga posture is fundamental! If you are well aligned, the effects of the postures will be more profound and will make your practice more effective. These are the ideal classes to deepen your understanding of the postures and to build towards a more advanced practice.",
         "teacher": "0a3949f2-8575-4eaf-8327-7722e05637af",
-        "tag": "beginer",
+        "tag": "beginner",
         "capacity":25,
         "isActive": true
     },
@@ -35,7 +35,7 @@
         "imgSrc": "/public/Hatha.jpg",
         "description": "Yin Yoga is mostly a floor based practice that is gentle yet challenging and offers deep access to the body. Poses are held for 3 to 5 minutes stretching deep connective tissues and fascia. The practice is based on Chinese medicine and targets various meridians in the body to regulate the organs. It is also a great initiation to meditation and a suitable class for all levels!",
         "teacher": "d143fcbb-edfe-46f6-8d81-54a6ca4c8387",
-        "tag": "beginer",
+        "tag": "beginner",
         "capacity":25,
         "isActive": true
     },

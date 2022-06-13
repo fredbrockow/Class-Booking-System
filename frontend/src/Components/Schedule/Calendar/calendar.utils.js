@@ -44,7 +44,10 @@ const slot_color = {
 const days_colors = {
     monday : "97DBAE",
     tuesday : "#F1E1A6",
-    wednesday : "#C3E5AE"
+    wednesday : "#C3E5AE",
+    thursday : "97DBAE",
+    friday : "#F1E1A6",
+    saturday : "#C3E5AE"
 }
 
 export {

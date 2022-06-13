@@ -80,7 +80,7 @@ const MainPanel = () => {
                     <Routes>
                         <Route path= "/editTeachers" element = {<EditTeachers teachers = {teachers} setTeachers = {setTeachers}/>}/>
                         <Route path= "/editClasses" element = {<EditClasses teachers = {teachers} classes = {yogaClasses} setClasses = {setYogaClasses}/>}/>
-                        <Route path= "/editCalendar" element = {<EditCalendar/>}/>
+                        <Route path= "/editCalendar" element = {<EditCalendar teachers = {teachers} classes = {yogaClasses} calendar = {calendar} setCalendar = {setCalendar}/>}/>
                         <Route path= "/usersPerWeek" element = {<UsersPerWeek calendar = {calendar}/>}/>
                         <Route path= "/usersPerClass" element = {<UsersPerClass calendar = {calendar} yogaClasses = {yogaClasses}/>}/>
                     </Routes>

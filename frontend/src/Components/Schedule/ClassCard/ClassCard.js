@@ -1,12 +1,37 @@
 import * as Styled from "./ClassCard.styles";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import  AuthContext from "../../../Context/AuthProvider"
 
-const ClassCard = ({ selectedClass }) => {
+import { hours_to_slot, MAX_STUDENT_PER_CLASS, isObjectEmpty } from "../../../utils"
+
+const ClassCard = ({ selectedClass, handleOnClick }) => {
+
+    const {auth} = useContext(AuthContext);
 
     const yogaClass = selectedClass.classSelected;
     const [teacher, setTeacher] = useState(null);
 
+    const isAlreadyBooked = (yogaClass) => {
+        let isBooked = false;
+
+        const slot = hours_to_slot[yogaClass.hours];
+        const arrClasses = auth.classes;
+
+        if (arrClasses.length > 0 ) {
+            arrClasses.forEach ((klass) => {
+                if (klass.dayName !== yogaClass.dayName) return;
+                if (klass.slot !== slot) return;
+                if (klass.classId !== yogaClass.id) return;
+
+                isBooked =true;
+            })
+        }
+         return isBooked;
+    }
+
+    console.log(selectedClass);
+    
     useEffect(() => {
 
         const teacherUrl = `/teacher/${yogaClass.teacher}`;
@@ -33,8 +58,6 @@ const ClassCard = ({ selectedClass }) => {
     
     }, []);
 
-
-
     return (
         <Styled.Wrapper>
             {teacher ?
@@ -54,7 +77,36 @@ const ClassCard = ({ selectedClass }) => {
                             <Styled.ClassDescriptionTitle>About This Class</Styled.ClassDescriptionTitle>
                             {yogaClass.description}
                         </Styled.ClassDescription>
-                        <Styled.EnrollButton>ENROLL</Styled.EnrollButton>
+
+                        {selectedClass.attending >= MAX_STUDENT_PER_CLASS ? 
+                        <>
+                        Class Full
+                        </>
+                        :
+                        <>
+                        {!isObjectEmpty(auth) && isAlreadyBooked( 
+                            { 
+                                dayName : selectedClass.day,
+                                hours: selectedClass.hours,
+                                id : yogaClass.id
+                            }
+                        ) ?
+                        "Already Booked"
+                        :
+                        <Styled.EnrollButton 
+                            onClick ={(e) => handleOnClick(e, {
+                                dayName : selectedClass.day,
+                                hours: selectedClass.hours,
+                                id : yogaClass.id
+                            }
+                        )}
+                        >
+                            ENROLL
+                        </Styled.EnrollButton>
+                        }
+                        
+                        </>
+                        }
                     </Styled.CardContentSubWrapper>
                 </Styled.CardContentWrapper>
             </>

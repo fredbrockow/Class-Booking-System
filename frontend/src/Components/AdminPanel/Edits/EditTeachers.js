@@ -74,8 +74,7 @@ const EditTeachers = ({teachers, setTeachers}) => {
             })
 
         } catch (err) {
-            console.log(err);
-            setErrMsg('Login Failed');
+            setErrMsg('Adding Teacher Failed');
         }
     }
 

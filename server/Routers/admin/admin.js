@@ -7,6 +7,7 @@ const verifyRoles = require('../../middleware/verifyRoles.js');
 const { adminAddTeacherHandler } = require('../../handlers/teacherHandler');
 const { adminAddClassHandler } = require('../../handlers/classHandler')
 const { adminGetAllUsersHandler } = require ('../../handlers/usersHandler')
+const {adminAddClassToCalendarHandler} = require ('../../handlers/calendarHandler')
 // to get the users of the studio
 
 router.get('/', (req, res) => {
@@ -20,6 +21,8 @@ router.get('/users', adminGetAllUsersHandler)
 router.post('/teacher', adminAddTeacherHandler);
 
 //add a class
-router.post('/class', adminAddClassHandler)
+router.post('/class', adminAddClassHandler);
+
+router.patch('/calendar', adminAddClassToCalendarHandler)
 
 module.exports = router;

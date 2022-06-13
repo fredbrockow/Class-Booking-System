@@ -31,7 +31,6 @@ const generateUsers = async (number) => {
         arrUsers.push(formatUser(user));
         usersId.push(user.uid)
     }
-    // console.log(arrUser);
     return {users:arrUsers, ids:usersId};
 }
 

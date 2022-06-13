@@ -22,7 +22,6 @@ const insertDataBase = async (collection_name, data_to_insert) => {
     
         // connect to the database (db name is provided as an argument to the function)
         const db = client.db(DB_NAME);
-        console.log("connected!");
     
         //add datas
         const response = await db.collection(collection_name).insertMany(data_to_insert);
@@ -33,9 +32,44 @@ const insertDataBase = async (collection_name, data_to_insert) => {
     finally {
         // close the connection to the database server
         client.close();
-        console.log("disconnected!");
     }
 };
+
+const dbAddAdminToDb = async () => {
+
+    const admin = 
+    {
+        "id": "9999999-666666666-33333-99999-xxxxx",
+        "firstName": "AdminFirstName",
+        "lastName": "AdminLastName",
+        "username": "admin",
+        "email": "userFirstName.userLastName@email.com",
+        "phoneNumber": "+99-999-999-999 x99999",
+        "password": "admin",
+        "dateOfBirth": "9999-99-99",
+        "roles": [123456789, 147852369],
+        "classes": []
+    }
+
+    const client = getNewClient()
+    try {
+        // connect to the client
+        await client.connect();
+    
+        // connect to the database (db name is provided as an argument to the function)
+        const db = client.db(DB_NAME);
+    
+        //add datas
+        const response = await db.collection(USERS).insertOne(admin);
+    }
+    catch (err){
+        console.log(err);
+    }
+    finally {
+        // close the connection to the database server
+        client.close();
+    }
+}
 
 const dbBatchImport = async () => {
 
@@ -52,7 +86,13 @@ const dbBatchImport = async () => {
     .then(() => console.log('done inserting the users data '));
 }
 
+
+
 dbBatchImport()
 .then(()=> {
     console.log('batch import done');
 });
+
+// dbAddAdminToDb ().then(()=> {
+//     console.log('Admin added');
+// });

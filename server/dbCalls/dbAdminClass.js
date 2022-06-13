@@ -19,7 +19,6 @@ const dbAdminAddClass = async (classInfo) => {
     try{
         await client.connect();
         const db = client.db(DB_NAME);
-        console.log("connected!");
 
         // check if teacher exists
 
@@ -48,11 +47,11 @@ const dbAdminAddClass = async (classInfo) => {
 
         const response = await db.collection(YOGA_CLASSES)
         .insertOne(
-            {id:id,src:"/public/Hatha.jpg",...classInfo, isActive:false}
+            {id:id,src:"/public/Hatha.jpg",...classInfo, isActive:true}
         );
         
         if(response.acknowledged){
-            return {id:id,src:"/public/Hatha.jpg",...classInfo, isActive:false};
+            return {id:id,src:"/public/Hatha.jpg",...classInfo, isActive:true};
         }
         else
         {
@@ -61,6 +60,10 @@ const dbAdminAddClass = async (classInfo) => {
     }
     catch (err) {
         throw err;
+    }
+    finally {
+        // close the connection to the database server
+        client.close();
     }
 }
 

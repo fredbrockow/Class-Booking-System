@@ -22,7 +22,6 @@ const dbGetAllClasses = async () => {
    
         // connect to the database (db name is provided as an argument to the function)
         const db = client.db(DB_NAME);
-        console.log("connected!");
 
         const response = await db.collection(YOGA_CLASSES).find().toArray();
 
@@ -37,7 +36,6 @@ const dbGetAllClasses = async () => {
    finally {
        // close the connection to the database server
        client.close();
-       console.log("disconnected!");
    }
 };
 
@@ -50,10 +48,9 @@ const dbGetClassById = async (classId) => {
     
         // connect to the database (db name is provided as an argument to the function)
         const db = client.db(DB_NAME);
-        console.log("connected!");
         
         const response = await db.collection(YOGA_CLASSES).findOne({id:classId});
-        console.log(response);
+
         if (response === null ){
             throw DATA_NOT_FOUND;
         }
@@ -65,7 +62,6 @@ const dbGetClassById = async (classId) => {
     finally{
         // close the connection to the database server
         client.close();
-        console.log("disconnected!");
     }   
 }
 

@@ -19,11 +19,6 @@ const EditClasses = ({teachers, classes, setClasses}) => {
     const [successMsg, setSuccessMsg] = useState('')
     const [errMsg, setErrMsg] = useState('');
 
-    const handleOnClick = () => {
-        setSuccessMsg("");
-    }
-
-
     useEffect(() => {
         userRef.current.focus();
 
@@ -38,11 +33,14 @@ const EditClasses = ({teachers, classes, setClasses}) => {
 
     }, [title, description, tag, teacher]);
 
-    function handleSelectChange (e) {
-        console.log("target.value ", e.target.value);
+    const handleSelectChange = (e) => {
         setTeacher(e.target.value);
     }
     
+    const handleOnClick = () => {
+        setSuccessMsg("");
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -68,7 +66,6 @@ const EditClasses = ({teachers, classes, setClasses}) => {
             .then((data) => {
                 if(data.status === 200){
 
-                    console.log("data ", data.data);
                     setTitle('');
                     setDescription('')
                     setTag('')
@@ -83,8 +80,7 @@ const EditClasses = ({teachers, classes, setClasses}) => {
             })
 
         } catch (err) {
-            console.log(err);
-            setErrMsg('Login Failed');
+            setErrMsg('Adding Class Failed');
         }
     }
 

@@ -43,56 +43,58 @@ const Login = () => {
             })
             .then((res) => res.json())
             .then((data) => {
-                console.log("data ", data);
-                
+                // console.log(data);
                 if(data.status === 200){
                     setUsername('');
                     setPwd('');
-                    navigate(from, { replace: true });
-
+                    
                     /** when it's time for Jswt */
                     // const accessToken = response?.data?.accessToken;
                     // const roles = response?.data?.roles;
-
+                    
                     // setAuth({ username, pwd, roles, accessToken });
-                       setAuth({username, pwd, roles: data.data.roles});
+                    console.log(data.data);
+                    setAuth({...data.data });
+                    navigate(from, { replace: true });
+                }
+                else if (data.status === 404){
+                    setErrMsg("user not found");
                 }
                 else{
-                    setErrMsg(data.message);
+                    setErrMsg('Login Failed');
                 }
             })
 
         } catch (err) {
-            console.log(err);
             setErrMsg('Login Failed');
         }
     }
 
     return (
         <Styled.Wrapper>
-            <Styled.ErrorSection className={errMsg ? "error_msg" : "hide"}>{errMsg}</Styled.ErrorSection>
             <Styled.Title>Sign In</Styled.Title>
-                    <Styled.Loginform onSubmit={handleSubmit}>
-                        <Styled.Label htmlFor="username">Username:</Styled.Label>
-                        <Styled.Input
-                            type="text"
-                            id="username"
-                            ref={userRef}
-                            autoComplete="off"
-                            onChange={(e) => setUsername(e.target.value)}
-                            value={username}
-                            required
-                        />
-                        <Styled.Label htmlFor="password">Password:</Styled.Label>
-                        <Styled.Input
-                            type="password"
-                            id="password"
-                            onChange={(e) => setPwd(e.target.value)}
-                            value={pwd}
-                            required
-                        />
-                        <Styled.SubmitButton type="submit">Sign In</Styled.SubmitButton>
-                    </Styled.Loginform>
+                <Styled.Loginform onSubmit={handleSubmit}>
+                    <Styled.Label htmlFor="username">Username:</Styled.Label>
+                    <Styled.Input
+                        type="text"
+                        id="username"
+                        ref={userRef}
+                        autoComplete="off"
+                        onChange={(e) => setUsername(e.target.value)}
+                        value={username}
+                        required
+                    />
+                    <Styled.Label htmlFor="password">Password:</Styled.Label>
+                    <Styled.Input
+                        type="password"
+                        id="password"
+                        onChange={(e) => setPwd(e.target.value)}
+                        value={pwd}
+                        required
+                    />
+                    <Styled.SubmitButton type="submit">Sign In</Styled.SubmitButton>
+                </Styled.Loginform>
+                <Styled.ErrorSection className={errMsg ? "error_msg" : "hide"}>{errMsg}</Styled.ErrorSection>
         </Styled.Wrapper>
     );
 };
