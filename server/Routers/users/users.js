@@ -4,7 +4,7 @@ const router = express.Router();
 const ROLES = require ('../../configuration/roles.js');
 const verifyRoles = require('../../middleware/verifyRoles.js');
 
-const {usersAddClass} = require('../../handlers/usersHandler')
+const {usersAddClass, usersRemoveClass} = require('../../handlers/usersHandler')
 
 // to get the users of the studio
 
@@ -13,8 +13,8 @@ router.get('/', (req, res) => {
 })
 
 router.patch('/addClass', usersAddClass);
-// router.patch('/addClass', (req,res) => {
-//     console.log(req.body);
-// });
+
+router.patch('/removeClass', usersRemoveClass);
+
 
 module.exports = router;

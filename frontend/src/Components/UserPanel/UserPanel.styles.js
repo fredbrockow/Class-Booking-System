@@ -4,10 +4,10 @@ const Wrapper = styled.div`
     display: flex;
 `;
 
-const MainPanel = styled.div``;
+const MainUserPanel = styled.div``;
 
 const Title = styled.div``;
 
 export {
-    Wrapper, MainPanel, Title
+    Wrapper, MainUserPanel, Title
 }

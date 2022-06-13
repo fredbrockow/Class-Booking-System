@@ -4,7 +4,7 @@ import ClassLabels from "./ClassLabels";
 import ClassCard from "./ClassCard/ClassCard";
 
 import { useNavigate} from "react-router-dom";
-import { useContext,useState, useEffect, useCallback } from "react";
+import { useContext, useState, useEffect, useCallback } from "react";
 import  AuthContext from "../../Context/AuthProvider"
 
 import { isObjectEmpty, slot_to_hours, hours_to_slot } from "../../utils";

@@ -6,7 +6,6 @@ import  AuthContext from "../../Context/AuthProvider"
 const UserProfile = () => {
 
     const {auth} = useContext(AuthContext);
-    console.log(auth);
 
     const { phoneNumber , dateOfBirth, email, firstName, lastName, username} = auth;
 
