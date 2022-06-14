@@ -2,6 +2,7 @@ import * as Styled from "./Schedule.styles";
 import Calendar from "./Calendar/Calendar";
 import ClassLabels from "./ClassLabels";
 import ClassCard from "./ClassCard/ClassCard";
+import Loading from "../Loading";
 
 import { useNavigate} from "react-router-dom";
 import { useContext, useState, useEffect, useCallback } from "react";
@@ -169,9 +170,9 @@ const Schedule = () => {
                     </Styled.RightSideWrapper>
                 </Styled.SubWrapper>
                 :
-                <>
-                Loading...
-                </>
+                <Styled.LoadingWrapper>
+                    <Loading message = {"Loading Calendar..."} size = {0.2}/>                
+                </Styled.LoadingWrapper>
             }
         </Styled.Wrapper>
     );

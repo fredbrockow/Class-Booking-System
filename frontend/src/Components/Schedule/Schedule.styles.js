@@ -14,6 +14,10 @@ const Wrapper = styled.div`
 
 `;
 
+const LoadingWrapper = styled.div`
+    color: var(--MainBlack);
+`;
+
 const SubWrapper = styled.div`
     display: flex;
     margin-top: 20px;
@@ -60,6 +64,6 @@ const NoClassSelected = styled.div`
 `;
 
 export {
-    Wrapper, SubWrapper, RightSideWrapper,
+    Wrapper,LoadingWrapper, SubWrapper, RightSideWrapper,
     Title, NoClassSelected
 }

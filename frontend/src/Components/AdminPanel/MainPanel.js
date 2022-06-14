@@ -14,6 +14,8 @@ import EditCalendar from './Edits/EditCalendar';
 import UsersPerWeek from './BarCharts/UsersPerWeek';
 import UsersPerClass from './BarCharts/UsersPerClass';
 
+import Loading from "../Loading";
+
 const MainPanel = () => {
 
     const [teachers, setTeachers] = useState(null);
@@ -77,6 +79,8 @@ const MainPanel = () => {
     return (
         <Styled.Wrapper>
                 {teachers && yogaClasses && calendar ?
+                <>
+                <div>NEED TO WRITE SOMETHING HERE</div>
                     <Routes>
                         <Route path= "/editTeachers" element = {<EditTeachers teachers = {teachers} setTeachers = {setTeachers}/>}/>
                         <Route path= "/editClasses" element = {<EditClasses teachers = {teachers} classes = {yogaClasses} setClasses = {setYogaClasses}/>}/>
@@ -84,8 +88,11 @@ const MainPanel = () => {
                         <Route path= "/usersPerWeek" element = {<UsersPerWeek calendar = {calendar}/>}/>
                         <Route path= "/usersPerClass" element = {<UsersPerClass calendar = {calendar} yogaClasses = {yogaClasses}/>}/>
                     </Routes>
+                </>
                 :
-                <>Please wait while the Admin Panel is being prepared ...</>
+                <Styled.LoadingWrapper>
+                    <Loading message = {"Please wait while the Admin Panel is being prepared ..."} size = {0.2}/>                
+                </Styled.LoadingWrapper>
                 }
         </Styled.Wrapper>
     );

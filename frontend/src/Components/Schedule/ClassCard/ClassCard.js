@@ -3,6 +3,7 @@ import * as Styled from "./ClassCard.styles";
 import { useContext, useEffect, useState } from "react";
 import  AuthContext from "../../../Context/AuthProvider"
 
+import Loading from "../../Loading";
 import { hours_to_slot, MAX_STUDENT_PER_CLASS, isObjectEmpty } from "../../../utils"
 
 const ClassCard = ({ selectedClass, handleOnClick }) => {
@@ -80,7 +81,7 @@ const ClassCard = ({ selectedClass, handleOnClick }) => {
 
                         {selectedClass.attending >= MAX_STUDENT_PER_CLASS ? 
                         <>
-                        Class Full
+                        <Styled.AlternateMessage>Class Full</Styled.AlternateMessage>
                         </>
                         :
                         <>
@@ -91,7 +92,7 @@ const ClassCard = ({ selectedClass, handleOnClick }) => {
                                 id : yogaClass.id
                             }
                         ) ?
-                        "Already Booked"
+                        <Styled.AlternateMessage>Already Booked</Styled.AlternateMessage>
                         :
                         <Styled.EnrollButton 
                             onClick ={(e) => handleOnClick(e, {
@@ -111,9 +112,9 @@ const ClassCard = ({ selectedClass, handleOnClick }) => {
                 </Styled.CardContentWrapper>
             </>
             :
-            <>
-                Loading ...
-            </>    
+            <Styled.LoadingWrapper>
+                <Loading message = {"Loading Class..."} size = {0.2}/>                
+            </Styled.LoadingWrapper>    
             }
         </Styled.Wrapper>
     );
