@@ -57,7 +57,7 @@ const ClassCard = ({ selectedClass, handleOnClick }) => {
         }
         getTeacher(teacherUrl);
     
-    }, []);
+    }, [selectedClass]);
 
     return (
         <Styled.Wrapper>
