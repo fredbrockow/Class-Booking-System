@@ -13,6 +13,10 @@ const Wrapper = styled.div`
     margin-right: 80px;
 `;
 
+const LoadingWrapper = styled.div`
+    color: var(--MainBlack);
+`;
+
 const CardHeader = styled.div``;
 
 const CardHeaderSubWrapper = styled.div`
@@ -65,6 +69,23 @@ const ClassDescriptionTitle = styled.div`
     margin-bottom: 2px;
 `;
 
+const AlternateMessage = styled.div`
+    align-self: end;
+    font-family:var(--font-anomaly);
+    width:20vw;
+    min-width: 120px;
+    margin-top: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    text-align: center;
+
+    background-color: transparent;
+    font-size: 1.3em;
+    color: var(--MainBlack);
+    border: solid 1px var(--MainBlack);
+`;
+
 const EnrollButton = styled.button`
     align-self: end;
     font-family:var(--font-anomaly);
@@ -94,9 +115,9 @@ const EnrollButton = styled.button`
 `;
 
 export {
-    Wrapper,CardHeader, CardHeaderSubWrapper, 
+    Wrapper, LoadingWrapper, CardHeader, CardHeaderSubWrapper, 
     CardContentWrapper, CardContentSubWrapper,
     ClassTitle, TeachedBy, TimeSlot,
     ClassImg, ClassLevel, ClassDescription, ClassDescriptionTitle,
-    EnrollButton
+    EnrollButton, AlternateMessage
 }

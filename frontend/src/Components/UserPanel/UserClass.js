@@ -5,6 +5,7 @@ import  AuthContext from "../../Context/AuthProvider";
 
 
 import UserClassCard from "./UserClassCard/UserClassCard";
+import Loading from "../Loading";
 import { getTeacherById , getClassById } from "./Users.utils";
 
 const UserClass = () => {
@@ -82,12 +83,18 @@ const UserClass = () => {
             // setErrMsg('Adding Class Failed');
         }
     }
-
+    yogaClasses && console.log("yogaClasses ",classes);
     return (
         <Styled.Wrapper>
             <Styled.Title>Classes you have booked</Styled.Title>
             <Styled.CardsWrapper>
-                {yogaClasses && teachers &&
+                {yogaClasses && teachers ?
+                <>
+                {classes.length < 1 ?
+                    <Styled.NoClasses>
+                        ...it looks like you haven't booked any classes
+                    </Styled.NoClasses>
+                :
                 <>
                     {classes.map((aClass,index) => {
                         const yogaClass = getClassById(aClass.classId, yogaClasses);
@@ -105,6 +112,12 @@ const UserClass = () => {
                         )
                     })}
                 </>
+                }
+                </>
+                :
+                <Styled.LoadingWrapper>
+                    <Loading message = {"Loading Booked Class..."} size = {0.2}/>                
+                </Styled.LoadingWrapper>
                 }
             </Styled.CardsWrapper>
         </Styled.Wrapper>

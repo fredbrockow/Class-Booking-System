@@ -7,7 +7,11 @@ const Wrapper = styled.div`
     padding-left: 20vw;
 `;
 
+const LoadingWrapper = styled.div`
+    color: var(--MainBlack);
+    margin-left: -240px;
+`;
 
 export {
-    Wrapper
+    Wrapper, LoadingWrapper
 }
