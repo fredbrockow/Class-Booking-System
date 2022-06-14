@@ -56,7 +56,7 @@ const UsersPerWeek = ({calendar}) => {
      
     return (
         <Wrapper>
-            TEST
+            <Title>Attendency Per Week</Title>
             <BarCharts charData = {userData}/>            
         </Wrapper>
     );
@@ -65,6 +65,13 @@ const UsersPerWeek = ({calendar}) => {
 export default UsersPerWeek;
 
 const Wrapper = styled.div `
-   width: 80%;
+  width: calc(100% - 231px);
+`;
 
+const Title = styled.div`
+  color: var(--MainBlack);
+  font-family: var(--font-secondary-header);
+  font-size: 1.4em;
+  margin-top: 24px;
+  margin-bottom: 34px;
 `;

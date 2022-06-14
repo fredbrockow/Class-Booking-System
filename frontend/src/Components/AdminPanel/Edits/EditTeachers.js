@@ -82,54 +82,66 @@ const EditTeachers = ({teachers, setTeachers}) => {
         <Styled.Wrapper>
             <Styled.Title>Add a New Teacher</Styled.Title>
                     <Styled.Form onSubmit={handleSubmit}>
-                        <Styled.Label htmlFor="firstName">first name:</Styled.Label>
-                        <Styled.Input
-                            type="text"
-                            id="firstName"
-                            ref={userRef}
-                            autoComplete="off"
-                            onChange={(e) => setFirstName(e.target.value)}
-                            value={firstName}
-                            required
-                        />
-                        <Styled.Label htmlFor="lastName">last name:</Styled.Label>
-                        <Styled.Input
-                            type="text"
-                            id="lastName"
-                            autoComplete="off"
-                            onChange={(e) => setLastName(e.target.value)}
-                            value={lastName}
-                            required
-                        />
-                        <Styled.Label htmlFor="username">user name:</Styled.Label>
-                        <Styled.Input
-                            type="text"
-                            id="username"
-                            autoComplete="off"
-                            onChange={(e) => setUsername(e.target.value)}
-                            value={username}
-                            required
-                        />
-                        <Styled.Label htmlFor="email">email:</Styled.Label>
-                        <Styled.Input
-                            type="email"
-                            id="email"
-                            autoComplete="off"
-                            onChange={(e) => setEmail(e.target.value)}
-                            value={email}
-                            required
-                        />
-                        <Styled.Label htmlFor="phoneNumber">phone number:</Styled.Label>
-                        <Styled.Input
-                            type="phone"
-                            id="phoneNumber"
-                            autoComplete="off"
-                            onChange={(e) => setPhoneNumber(e.target.value)}
-                            value={phoneNumber}
-                            required
-                        />
+                        <Styled.Section>
+                            <Styled.Label htmlFor="firstName">first name:</Styled.Label>
+                            <Styled.Input
+                                type="text"
+                                id="firstName"
+                                ref={userRef}
+                                autoComplete="off"
+                                onChange={(e) => setFirstName(e.target.value)}
+                                value={firstName}
+                                required
+                            />
+                        </Styled.Section>
+                        <Styled.Section>
+                            <Styled.Label htmlFor="lastName">last name:</Styled.Label>
+                            <Styled.Input
+                                type="text"
+                                id="lastName"
+                                autoComplete="off"
+                                onChange={(e) => setLastName(e.target.value)}
+                                value={lastName}
+                                required
+                            />
+                        </Styled.Section>
+                        <Styled.Section>
+                            <Styled.Label htmlFor="username">user name:</Styled.Label>
+                            <Styled.Input
+                                type="text"
+                                id="username"
+                                autoComplete="off"
+                                onChange={(e) => setUsername(e.target.value)}
+                                value={username}
+                                required
+                            />
+                        </Styled.Section>
+                        <Styled.Section>
+                            <Styled.Label htmlFor="email">email:</Styled.Label>
+                            <Styled.Input
+                                type="email"
+                                id="email"
+                                autoComplete="off"
+                                onChange={(e) => setEmail(e.target.value)}
+                                value={email}
+                                required
+                            />
+                        </Styled.Section>
+                        <Styled.Section>
+                            <Styled.Label htmlFor="phoneNumber">phone number:</Styled.Label>
+                            <Styled.Input
+                                type="phone"
+                                id="phoneNumber"
+                                autoComplete="off"
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                value={phoneNumber}
+                                required
+                            />
+                        </Styled.Section>
+                        <Styled.Section>
+                            <Styled.SubmitButton type="submit">Add New Teacher</Styled.SubmitButton>
+                        </Styled.Section>
 
-                        <Styled.SubmitButton type="submit">Add New Teacher</Styled.SubmitButton>
                     </Styled.Form>
 
                     <Styled.SuccessSection className={successMsg ? "success_msg" : "hide"}>{successMsg}</Styled.SuccessSection>

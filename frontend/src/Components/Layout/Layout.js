@@ -1,14 +1,13 @@
 import styled from "styled-components";
+import backGroundImg from '../../assets/bande_PageAccueil.png';
 
 import { Outlet } from "react-router-dom";
 
-import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 
 const Layout = () => {
     return (
         <Wrapper>
-            <Header/>
             <Nav/>
             <Outlet/>
         </Wrapper>
@@ -18,8 +17,10 @@ const Layout = () => {
 export default Layout;
 
 const Wrapper = styled.div`
-    & > div:last-child {
-        height:90vh;
-
-    }
+    background-image: url(${backGroundImg});
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    
+    height:100vh;
 `;

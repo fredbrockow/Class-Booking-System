@@ -85,26 +85,28 @@ const UserClass = () => {
 
     return (
         <Styled.Wrapper>
-            <Styled.Title>Class you are Enrolled In</Styled.Title>
-            {yogaClasses && teachers &&
-            <>
-                {classes.map((aClass,index) => {
-                    const yogaClass = getClassById(aClass.classId, yogaClasses);
-                    const teacher = getTeacherById(yogaClass.teacher, teachers)
+            <Styled.Title>Classes you have booked</Styled.Title>
+            <Styled.CardsWrapper>
+                {yogaClasses && teachers &&
+                <>
+                    {classes.map((aClass,index) => {
+                        const yogaClass = getClassById(aClass.classId, yogaClasses);
+                        const teacher = getTeacherById(yogaClass.teacher, teachers)
 
-                    return (
-                        <UserClassCard 
-                          day = {aClass.dayName}
-                          timeSlot = {aClass.slot}
-                          yogaClass = {yogaClass}
-                          teacher = {teacher}
-                          handleOnClick = {handleRemoveClass}
-                          key = {`kja${index}sdj${aClass.classId}lkf${index}ejoupa${index}Idslkj${aClass.classId}lsjd`}
-                        />
-                    )
-                })}
-            </>
-            }
+                        return (
+                            <UserClassCard 
+                            day = {aClass.dayName}
+                            timeSlot = {aClass.slot}
+                            yogaClass = {yogaClass}
+                            teacher = {teacher}
+                            handleOnClick = {handleRemoveClass}
+                            key = {`kja${index}sdj${aClass.classId}lkf${index}ejoupa${index}Idslkj${aClass.classId}lsjd`}
+                            />
+                        )
+                    })}
+                </>
+                }
+            </Styled.CardsWrapper>
         </Styled.Wrapper>
     );
 };

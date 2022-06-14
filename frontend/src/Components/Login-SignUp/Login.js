@@ -72,29 +72,35 @@ const Login = () => {
 
     return (
         <Styled.Wrapper>
-            <Styled.Title>Sign In</Styled.Title>
-                <Styled.Loginform onSubmit={handleSubmit}>
-                    <Styled.Label htmlFor="username">Username:</Styled.Label>
-                    <Styled.Input
-                        type="text"
-                        id="username"
-                        ref={userRef}
-                        autoComplete="off"
-                        onChange={(e) => setUsername(e.target.value)}
-                        value={username}
-                        required
-                    />
-                    <Styled.Label htmlFor="password">Password:</Styled.Label>
-                    <Styled.Input
-                        type="password"
-                        id="password"
-                        onChange={(e) => setPwd(e.target.value)}
-                        value={pwd}
-                        required
-                    />
-                    <Styled.SubmitButton type="submit">Sign In</Styled.SubmitButton>
-                </Styled.Loginform>
-                <Styled.ErrorSection className={errMsg ? "error_msg" : "hide"}>{errMsg}</Styled.ErrorSection>
+            <Styled.SubWrapper>
+                <Styled.Title>Log In</Styled.Title>
+                    <Styled.Loginform onSubmit={handleSubmit}>
+                        <Styled.Field>
+                            <Styled.Label htmlFor="username">Username:</Styled.Label>
+                            <Styled.Input
+                                type="text"
+                                id="username"
+                                ref={userRef}
+                                autoComplete="off"
+                                onChange={(e) => setUsername(e.target.value)}
+                                value={username}
+                                required
+                            />
+                        </Styled.Field>
+                        <Styled.Field>
+                            <Styled.Label htmlFor="password">Password:</Styled.Label>
+                            <Styled.Input
+                                type="password"
+                                id="password"
+                                onChange={(e) => setPwd(e.target.value)}
+                                value={pwd}
+                                required
+                            />
+                        </Styled.Field>
+                        <Styled.SubmitButton type="submit">Log In</Styled.SubmitButton>
+                    </Styled.Loginform>
+                    <Styled.ErrorSection className={errMsg ? "error_msg" : "hide"}>{errMsg}</Styled.ErrorSection>
+            </Styled.SubWrapper>
         </Styled.Wrapper>
     );
 };
