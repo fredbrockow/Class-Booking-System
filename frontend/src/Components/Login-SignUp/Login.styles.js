@@ -79,7 +79,6 @@ const SubmitButton = styled.button`
     &:active{
         transform: translateY(3px) ;
     }
-
 `;
 
 const ErrorSection = styled.div`

@@ -74,7 +74,7 @@ const ClassCard = ({ selectedClass, handleOnClick }) => {
                     <Styled.CardContentSubWrapper>
                         <Styled.ClassLevel>Level: {yogaClass.tag}</Styled.ClassLevel>
                         <Styled.ClassDescription>
-                            <Styled.ClassDescriptionTitle>About This Class</Styled.ClassDescriptionTitle>
+                            <Styled.ClassDescriptionTitle>About This Class:</Styled.ClassDescriptionTitle>
                             {yogaClass.description}
                         </Styled.ClassDescription>
 
@@ -113,7 +113,7 @@ const ClassCard = ({ selectedClass, handleOnClick }) => {
             :
             <>
                 Loading ...
-                </>    
+            </>    
             }
         </Styled.Wrapper>
     );
