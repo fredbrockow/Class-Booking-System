@@ -94,12 +94,12 @@ const EditCalendar = ({teachers , classes, calendar, setCalendar }) => {
 
     return (
         <Styled.Wrapper>
-            <Styled.Title>Add a Class To The Calendar</Styled.Title>
+            <Styled.Title>Add a Class to the Calendar</Styled.Title>
             <Styled.Form onSubmit={handleSubmit}>
                 <Styled.Section>
-                    <Styled.Label htmlFor ="class"> select a class to assign </Styled.Label>
+                    <Styled.Label htmlFor ="class"> Select a Class to Assign </Styled.Label>
                     <CustomSelector 
-                        label = "select a class"
+                        label = "Select a Class"
                         selectedValue = {yogaClass}
                         data = {formatedClassesData}
                         handleSelectChange = {handleClassSelectChange}
@@ -107,9 +107,9 @@ const EditCalendar = ({teachers , classes, calendar, setCalendar }) => {
                     />
                 </Styled.Section>
                 <Styled.Section>
-                    <Styled.Label htmlFor ="day"> select a day in the calendar </Styled.Label>
+                    <Styled.Label htmlFor ="day"> Select a Day in the Calendar </Styled.Label>
                     <CustomSelector 
-                        label = "select a day"
+                        label = "Select a Day"
                         selectedValue = {day}
                         data = {formatedCalendarData.days}
                         handleSelectChange = {handleDaySelectChange}
@@ -119,12 +119,12 @@ const EditCalendar = ({teachers , classes, calendar, setCalendar }) => {
                 <Styled.Section>
                     {day && 
                     <>
-                        <Styled.Label htmlFor ="hour"> select a time slot for this day </Styled.Label>
+                        <Styled.Label htmlFor ="hour"> Select a Time Slot for this Day </Styled.Label>
                         <CustomSelector 
                             label = {
                                 formatedCalendarData[`${day}`].length <1 ?
-                            "no time slot free ":
-                            "select time slot"
+                            "No Time Slot Free ":
+                            "Select Time Slot"
                             }
                             selectedValue = {timeSlot}
                             data = {formatedCalendarData[`${day}`]}

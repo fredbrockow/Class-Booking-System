@@ -6,7 +6,7 @@ const UserSidePanel = () => {
 
         <Styled.Wrapper>
             <Styled.LinkWrapper>
-                <Styled.Title>Your Informations</Styled.Title>
+                <Styled.Title>Your Information</Styled.Title>
                 <Link to="userProfile">Your Profile</Link>
                 <Link to="userClass">Your Classes</Link>
             </Styled.LinkWrapper>

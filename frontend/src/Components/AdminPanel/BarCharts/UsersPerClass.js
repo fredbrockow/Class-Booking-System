@@ -34,7 +34,7 @@ const UsersPerClass = ( {yogaClasses , calendar}) => {
       });
     return (
         <Wrapper>
-            <Title>Attendency Per Class</Title>
+            <Title>Attendance Per Class</Title>
             <BarCharts charData = {userData}/>            
         </Wrapper>
     );

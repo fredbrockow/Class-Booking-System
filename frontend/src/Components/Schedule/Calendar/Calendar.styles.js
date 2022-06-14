@@ -33,6 +33,7 @@ const WeekDayName = styled.div`
     color: var(--MainBlack);
 
     border-bottom: solid 1px var(--MainBlack);
+    text-transform: capitalize; 
 `;
 
 const WeekDay = styled.div`
@@ -102,6 +103,7 @@ const ClassLevel = styled.div`
     font-family: var(--font-text);
     color: var(--MainBlack);
     font-size: 0.7em;
+    text-transform: capitalize; 
 `;
 
 const Wrapper = styled.div`
