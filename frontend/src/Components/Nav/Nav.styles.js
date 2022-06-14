@@ -70,7 +70,7 @@ const LeftGroup = styled.div`
     display: flex;
     justify-content: flex-start;
     min-width: 200px;
-    margin-left: 50px;
+    margin-left: 80px;
 
 `;
 
@@ -86,7 +86,7 @@ const RightGroup = styled.div`
     justify-content: flex-end;
 
     min-width: 300px;
-    margin-right: 50px;
+    margin-right: 80px;
 `;
 
 

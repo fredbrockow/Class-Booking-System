@@ -54,7 +54,11 @@ const Calendar = (props) => {
                                             })}
                                             key= {`lkdhfjkhjkshdf_${day.dayName}sdfnjkhkjhdsf_${index}`}
                                         >
-                                            {aClass.title}
+                                            <Styled.ClassSlotWrapper>
+                                                <Styled.ClassName>{aClass.title}</Styled.ClassName>
+                                                <Styled.ClassLevel>{aClass.tag}</Styled.ClassLevel>
+                                            </Styled.ClassSlotWrapper>
+                                            
                                         </Styled.TimeSlot>
                                     )}
                                     return null;

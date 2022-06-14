@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { 
     class_level_color, 
-    slot_color, days_colors
+    days_colors
 
 } from "./calendar.utils";
 
 
 const Week = styled.div`
-    background-color: #f5f5f5;
+    background-color: #e7e6e1;
+    /* background-color: #cadefc; */
 
     grid-column-start: week;
 
@@ -24,12 +25,20 @@ const Week = styled.div`
 const WeekDayName = styled.div`
     background-color: ${props=>days_colors[props.day]};
     grid-row-start: title;
+    text-align: center;
+    padding-top: 8px;
+    font-family: var(--font-anomaly);
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--MainBlack);
+
+    border-bottom: solid 1px var(--MainBlack);
 `;
 
 const WeekDay = styled.div`
     display: grid;
     grid-template-rows:
-    [title] 1fr
+    [title] 0.5fr
     [slot1] 1fr 
     [slot2] 1fr 
     [slot3] 1fr 
@@ -44,7 +53,7 @@ const TimeSlot = styled.div`
     background-color: ${props=>class_level_color[props.level]};
     grid-row-start: ${props=>props.time_slot};
 
-    height : 50px;
+    /* height : 50px; */
 
 `;
 
@@ -53,6 +62,7 @@ const Hours = styled.div`
     grid-row-start: ${props=>props.time_slot};
 
     font-size: 0.7em;
+    color: var(--MainBlack);
 
     align-self: flex-end;
     justify-self: flex-end;
@@ -61,9 +71,10 @@ const Hours = styled.div`
 `;
 
 const HoursWrapper = styled.div`
+    width: 70px;
     display: grid;
     grid-template-rows:
-    [title] 1fr
+    [title] 0.5fr
     [slot1] 1fr 
     [slot2] 1fr 
     [slot3] 1fr 
@@ -72,13 +83,38 @@ const HoursWrapper = styled.div`
     [slot6] 1fr;
 `;
 
+const ClassSlotWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100%;
+    padding: 0px 5px;
+
+`;
+
+const ClassName = styled.div`
+    font-family: var(--font-secondary-header);
+    text-align: center;
+`;
+
+const ClassLevel = styled.div`
+    font-family: var(--font-text);
+    color: var(--MainBlack);
+    font-size: 0.7em;
+`;
+
 const Wrapper = styled.div`
     display: flex;
+    height: 414px;
+
+    border-right: solid 6px var(--button-background-gray);
 `;
 
 export {
     Week,
     WeekDay, WeekDayName,
-    TimeSlot, Hours,
+    TimeSlot, Hours, 
+    ClassSlotWrapper, ClassName, ClassLevel,
     Wrapper, HoursWrapper
 }

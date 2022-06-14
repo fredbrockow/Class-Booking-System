@@ -7,7 +7,7 @@ import { useNavigate} from "react-router-dom";
 import { useContext, useState, useEffect, useCallback } from "react";
 import  AuthContext from "../../Context/AuthProvider"
 
-import { isObjectEmpty, slot_to_hours, hours_to_slot } from "../../utils";
+import { isObjectEmpty, hours_to_slot } from "../../utils";
 
 
 const Schedule = () => {
@@ -57,9 +57,6 @@ const Schedule = () => {
             navigate("/login");
         }
         else{
-
-            // console.log(classSelected);
-            // console.log('conversion attempt ', hours_to_slot[classSelected.hours]);
 
             try {
                 await fetch('/users/addClass', {
@@ -167,7 +164,7 @@ const Schedule = () => {
                         {selectedClass !== null ?
                         <ClassCard selectedClass= {selectedClass} handleOnClick = {handleOnClickEnroll}/>
                         :
-                        "no class Selected"
+                        <Styled.NoClassSelected><span>Click on the calendar to book a class and learn more about it</span></Styled.NoClassSelected>
                         }
                     </Styled.RightSideWrapper>
                 </Styled.SubWrapper>
