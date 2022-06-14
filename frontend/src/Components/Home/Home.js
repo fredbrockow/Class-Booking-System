@@ -16,18 +16,18 @@ const Home = () => {
             <Styled.MainWrapper>
                 <Styled.HeaderImg alt='' src={MainPageYogaPose}/>
                 <Styled.MainSubWrapper>
-                    <Styled.Title>My Yoga Studio</Styled.Title>
-                    <Styled.Subtitle>Something about that place that is Super Great</Styled.Subtitle>
+                    <Styled.Title>Ananda Yoga</Styled.Title>
+                    <Styled.Subtitle>Find your bliss, one breath at a time</Styled.Subtitle>
                 </Styled.MainSubWrapper>
             </Styled.MainWrapper>
             <Styled.ParagraphWrapper>
                 <Styled.ParagraphTitle>Our Classes</Styled.ParagraphTitle>
-                <Styled.ParagraphSubTitle>Something About The Philosophy, etc..</Styled.ParagraphSubTitle>
+                <Styled.ParagraphSubTitle>Yoga for Every Body</Styled.ParagraphSubTitle>
                 <Styled.ParagraphSubWrapper>
                     <Styled.Content>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero 
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco poriti laboris nisi ut aliquip ex ea commodo consequat.
+                    At Ananda Yoga, our priority is yoga that makes every body feel good, taught by experienced teachers who 
+                    care about your practice. No supermodels. No sermons. No toxin shaming and no flim flam shimmy sham. 
+                    Just solid teaching, intelligent sequencing and endorphins aplenty.
                     </Styled.Content>
                     <Styled.Button onClick={() => navigate('/schedule')}>Go To Schedule <BsArrowRightShort/></Styled.Button>
                 </Styled.ParagraphSubWrapper>

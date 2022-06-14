@@ -80,7 +80,7 @@ const MainPanel = () => {
         <Styled.Wrapper>
                 {teachers && yogaClasses && calendar ?
                 <>
-                <div>NEED TO WRITE SOMETHING HERE</div>
+                {/* <div>All set up! Please select an Admin Action</div> */}
                     <Routes>
                         <Route path= "/editTeachers" element = {<EditTeachers teachers = {teachers} setTeachers = {setTeachers}/>}/>
                         <Route path= "/editClasses" element = {<EditClasses teachers = {teachers} classes = {yogaClasses} setClasses = {setYogaClasses}/>}/>

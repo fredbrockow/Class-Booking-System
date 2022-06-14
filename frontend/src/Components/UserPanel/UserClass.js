@@ -86,13 +86,13 @@ const UserClass = () => {
     yogaClasses && console.log("yogaClasses ",classes);
     return (
         <Styled.Wrapper>
-            <Styled.Title>Classes you have booked</Styled.Title>
+            <Styled.Title>Classes You Have Booked</Styled.Title>
             <Styled.CardsWrapper>
                 {yogaClasses && teachers ?
                 <>
                 {classes.length < 1 ?
                     <Styled.NoClasses>
-                        ...it looks like you haven't booked any classes
+                        ...it looks like you haven't booked any classes.
                     </Styled.NoClasses>
                 :
                 <>

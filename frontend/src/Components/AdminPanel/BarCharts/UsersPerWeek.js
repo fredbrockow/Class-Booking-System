@@ -56,7 +56,7 @@ const UsersPerWeek = ({calendar}) => {
      
     return (
         <Wrapper>
-            <Title>Attendency Per Week</Title>
+            <Title>Attendance Per Week</Title>
             <BarCharts charData = {userData}/>            
         </Wrapper>
     );

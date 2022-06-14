@@ -151,7 +151,7 @@ const Schedule = () => {
 
     return (
         <Styled.Wrapper>
-            <Styled.Title>This Week Schedule</Styled.Title>
+            <Styled.Title>This Week's Schedule</Styled.Title>
             {
                 calendar && yogaClass ?
                 <Styled.SubWrapper>
@@ -165,7 +165,7 @@ const Schedule = () => {
                         {selectedClass !== null ?
                         <ClassCard selectedClass= {selectedClass} handleOnClick = {handleOnClickEnroll}/>
                         :
-                        <Styled.NoClassSelected><span>Click on the calendar to book a class and learn more about it</span></Styled.NoClassSelected>
+                        <Styled.NoClassSelected><span>Click on the calendar to book a class and learn more about it.</span></Styled.NoClassSelected>
                         }
                     </Styled.RightSideWrapper>
                 </Styled.SubWrapper>

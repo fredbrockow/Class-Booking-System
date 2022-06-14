@@ -83,7 +83,7 @@ const EditTeachers = ({teachers, setTeachers}) => {
             <Styled.Title>Add a New Teacher</Styled.Title>
                     <Styled.Form onSubmit={handleSubmit}>
                         <Styled.Section>
-                            <Styled.Label htmlFor="firstName">first name:</Styled.Label>
+                            <Styled.Label htmlFor="firstName">First Name:</Styled.Label>
                             <Styled.Input
                                 type="text"
                                 id="firstName"
@@ -95,7 +95,7 @@ const EditTeachers = ({teachers, setTeachers}) => {
                             />
                         </Styled.Section>
                         <Styled.Section>
-                            <Styled.Label htmlFor="lastName">last name:</Styled.Label>
+                            <Styled.Label htmlFor="lastName">Last Name:</Styled.Label>
                             <Styled.Input
                                 type="text"
                                 id="lastName"
@@ -106,7 +106,7 @@ const EditTeachers = ({teachers, setTeachers}) => {
                             />
                         </Styled.Section>
                         <Styled.Section>
-                            <Styled.Label htmlFor="username">user name:</Styled.Label>
+                            <Styled.Label htmlFor="username">User Name:</Styled.Label>
                             <Styled.Input
                                 type="text"
                                 id="username"
@@ -117,7 +117,7 @@ const EditTeachers = ({teachers, setTeachers}) => {
                             />
                         </Styled.Section>
                         <Styled.Section>
-                            <Styled.Label htmlFor="email">email:</Styled.Label>
+                            <Styled.Label htmlFor="email">Email:</Styled.Label>
                             <Styled.Input
                                 type="email"
                                 id="email"
@@ -128,7 +128,7 @@ const EditTeachers = ({teachers, setTeachers}) => {
                             />
                         </Styled.Section>
                         <Styled.Section>
-                            <Styled.Label htmlFor="phoneNumber">phone number:</Styled.Label>
+                            <Styled.Label htmlFor="phoneNumber">Phone Number:</Styled.Label>
                             <Styled.Input
                                 type="phone"
                                 id="phoneNumber"

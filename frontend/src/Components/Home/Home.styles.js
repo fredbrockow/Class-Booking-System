@@ -29,7 +29,7 @@ const Title = styled.div`
 `;
 
 const Subtitle = styled.div`
-    margin-top: 3vh;
+    margin-top: 1vh;
     font-family: var(--font-secondary-header);
 `;
 

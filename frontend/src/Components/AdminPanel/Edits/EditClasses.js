@@ -91,7 +91,7 @@ const EditClasses = ({teachers, classes, setClasses}) => {
             <Styled.Title>Add a New Class</Styled.Title>
                 <Styled.Form onSubmit={handleSubmit}>
                     <Styled.Section>
-                        <Styled.Label htmlFor="title">class title:</Styled.Label>
+                        <Styled.Label htmlFor="title">Class Title:</Styled.Label>
                         <Styled.Input
                             type="text"
                             id="title"
@@ -103,7 +103,7 @@ const EditClasses = ({teachers, classes, setClasses}) => {
                         />
                     </Styled.Section>
                     <Styled.Section>
-                        <Styled.Label htmlFor="description">description:</Styled.Label>
+                        <Styled.Label htmlFor="description">Description:</Styled.Label>
                         <Styled.TextArea
                             id="description"
                             autoComplete="off"
@@ -113,22 +113,22 @@ const EditClasses = ({teachers, classes, setClasses}) => {
                         />
                     </Styled.Section>
                     <Styled.Section>
-                        <Styled.Label htmlFor ="tag">choose a tag:</Styled.Label>
+                        <Styled.Label htmlFor ="tag">Choose a Tag:</Styled.Label>
                         <Styled.Select 
                             id="tag" 
                             onChange={(e) => setTag(e.target.value)} 
                             value= {tag}
                             required>
-                            <option value ="" >choose a tag</option>
-                            <option value = 'beginner' >beginner</option>
-                            <option value = 'intermediate' >intermediate</option>
-                            <option value = 'advanced' >advanced</option>
+                            <option value ="" >Choose a Tag</option>
+                            <option value = 'beginner' >Beginner</option>
+                            <option value = 'intermediate' >Intermediate</option>
+                            <option value = 'advanced' >Advanced</option>
                         </Styled.Select>
                     </Styled.Section>
                     <Styled.Section>
-                        <Styled.Label htmlFor ="teacher">assign a teacher:</Styled.Label>
+                        <Styled.Label htmlFor ="teacher">Assign a Teacher:</Styled.Label>
                         <CustomSelector 
-                            label = "assign a teacher"
+                            label = "Assign a Teacher"
                             selectedValue = {teacher}
                             data = {formatedTeacherData}
                             handleSelectChange = {handleSelectChange}
