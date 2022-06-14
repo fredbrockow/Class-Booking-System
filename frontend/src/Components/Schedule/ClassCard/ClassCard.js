@@ -101,7 +101,7 @@ const ClassCard = ({ selectedClass, handleOnClick }) => {
                             }
                         )}
                         >
-                            ENROLL
+                            BOOK NOW
                         </Styled.EnrollButton>
                         }
                         

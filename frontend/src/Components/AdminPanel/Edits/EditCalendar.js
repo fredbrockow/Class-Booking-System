@@ -94,44 +94,49 @@ const EditCalendar = ({teachers , classes, calendar, setCalendar }) => {
 
     return (
         <Styled.Wrapper>
-            <Styled.Title>Add a Class to the calendar</Styled.Title>
+            <Styled.Title>Add a Class To The Calendar</Styled.Title>
             <Styled.Form onSubmit={handleSubmit}>
-
-                <Styled.Label htmlFor ="class"> Select a Class to Assign </Styled.Label>
-                <CustomSelector 
-                    label = "Select a Class"
-                    selectedValue = {yogaClass}
-                    data = {formatedClassesData}
-                    handleSelectChange = {handleClassSelectChange}
-                    id = "class"
-                />
-                <Styled.Label htmlFor ="day"> Select a Day in the Calendar </Styled.Label>
-                <CustomSelector 
-                    label = "Select a day"
-                    selectedValue = {day}
-                    data = {formatedCalendarData.days}
-                    handleSelectChange = {handleDaySelectChange}
-                    id = "day"
-                />
-                {day && 
-                <>
-                    <Styled.Label htmlFor ="hour"> Select a Time Slot for this Day </Styled.Label>
+                <Styled.Section>
+                    <Styled.Label htmlFor ="class"> select a class to assign </Styled.Label>
                     <CustomSelector 
-                        label = {
-                            formatedCalendarData[`${day}`].length <1 ?
-                        "No Time Slot Free ":
-                        "Select Time Slot"
-                        }
-                        selectedValue = {timeSlot}
-                        data = {formatedCalendarData[`${day}`]}
-                        handleSelectChange = {handleTimeSlotSelectChange}
+                        label = "select a class"
+                        selectedValue = {yogaClass}
+                        data = {formatedClassesData}
+                        handleSelectChange = {handleClassSelectChange}
+                        id = "class"
+                    />
+                </Styled.Section>
+                <Styled.Section>
+                    <Styled.Label htmlFor ="day"> select a day in the calendar </Styled.Label>
+                    <CustomSelector 
+                        label = "select a day"
+                        selectedValue = {day}
+                        data = {formatedCalendarData.days}
+                        handleSelectChange = {handleDaySelectChange}
                         id = "day"
                     />
-                </>
-                }
-
-
-                <Styled.SubmitButton type="submit">Add New Class</Styled.SubmitButton>
+                </Styled.Section>
+                <Styled.Section>
+                    {day && 
+                    <>
+                        <Styled.Label htmlFor ="hour"> select a time slot for this day </Styled.Label>
+                        <CustomSelector 
+                            label = {
+                                formatedCalendarData[`${day}`].length <1 ?
+                            "no time slot free ":
+                            "select time slot"
+                            }
+                            selectedValue = {timeSlot}
+                            data = {formatedCalendarData[`${day}`]}
+                            handleSelectChange = {handleTimeSlotSelectChange}
+                            id = "day"
+                        />
+                    </>
+                    }
+                </Styled.Section>
+                <Styled.Section>
+                    <Styled.SubmitButton type="submit">Add New Class</Styled.SubmitButton>
+                </Styled.Section>
             </Styled.Form>
 
             <Styled.SuccessSection className={successMsg ? "success_msg" : "hide"}>{successMsg}</Styled.SuccessSection>

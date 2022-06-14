@@ -8,7 +8,7 @@ const UserPanel = () => {
         <Styled.Wrapper>
             <UserSidePanel/>
             <Styled.MainUserPanel>
-                <Styled.Title>THIS IS THE USER PANEL</Styled.Title>
+                <Styled.Title>My Account</Styled.Title>
                 <Outlet/>
             </Styled.MainUserPanel>
         </Styled.Wrapper>

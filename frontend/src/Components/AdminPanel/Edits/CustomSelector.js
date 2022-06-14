@@ -28,14 +28,16 @@
  
  const Select = styled.select`
      cursor: pointer;
-     border-color: var(--veryLightGreyBorder);
-     background-color: var(--itemBackground);
-     color: var(--subTextColor);
+     border-color: var(--MainBlack);
+     background-color: var(--semi-tranparent-grey-InputField);
+     color: var(--MainBlack);
      min-width:40px;
-     text-align: center;
+     text-align: right;
+
+     padding: 5px 0px;
  
      & option {
-         background-color: var(--itemBackground);
+         background-color: var(--semi-tranparent-grey-InputField);
          /* text-align: left; */
      }
  

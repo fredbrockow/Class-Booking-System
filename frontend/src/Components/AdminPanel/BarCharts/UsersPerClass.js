@@ -34,7 +34,7 @@ const UsersPerClass = ( {yogaClasses , calendar}) => {
       });
     return (
         <Wrapper>
-            TEST
+            <Title>Attendency Per Class</Title>
             <BarCharts charData = {userData}/>            
         </Wrapper>
     );
@@ -42,6 +42,14 @@ const UsersPerClass = ( {yogaClasses , calendar}) => {
 
 export default UsersPerClass;
 
-const Wrapper = styled.div`
-    width: 80%;
+const Wrapper = styled.div `
+  width: calc(100% - 231px);
+`;
+
+const Title = styled.div`
+  color: var(--MainBlack);
+  font-family: var(--font-secondary-header);
+  font-size: 1.4em;
+  margin-top: 24px;
+  margin-bottom: 34px;
 `;

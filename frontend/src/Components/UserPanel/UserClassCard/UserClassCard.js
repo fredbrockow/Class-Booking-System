@@ -7,30 +7,39 @@ const UserClassCard = ( { day, timeSlot, yogaClass, teacher, handleOnClick }) =>
     return (
         <Styled.Wrapper>
         <Styled.CardHeader>
-            <Styled.ClassTitle>{yogaClass.title}</Styled.ClassTitle>
+            <Styled.ClassImg alt="" src={yogaClass.imgSrc} />
             <Styled.CardHeaderSubWrapper>
-                <Styled.TeachedBy>Taught by {teacher.firstName} {teacher.lastName}</Styled.TeachedBy>
-                <Styled.TimeSlot>{day} - {slot_to_hours[timeSlot]}</Styled.TimeSlot>
+                <Styled.TimeSlot><span>{day}</span> - {slot_to_hours[timeSlot]}</Styled.TimeSlot>
+                <Styled.CardContentWrapper>
+                    <Styled.ClassTitle>{yogaClass.title}</Styled.ClassTitle>
+                    <Styled.TeachedBy>- Taught by {teacher.firstName} {teacher.lastName}</Styled.TeachedBy>
+                    <Styled.ClassLevel>- Level: {yogaClass.tag}</Styled.ClassLevel>
+                    <Styled.CardContentSubWrapper>
+                        <Styled.RemoveButton 
+                            onClick = {(e)=> {
+                                handleOnClick(e, {
+                                    dayName: day,
+                                    slotKey : timeSlot,
+                                    classId : yogaClass.id
+                                })
+                            }}>
+                            Remove this Class
+                        </Styled.RemoveButton>
+                    </Styled.CardContentSubWrapper>
+                </Styled.CardContentWrapper>
             </Styled.CardHeaderSubWrapper>
         </Styled.CardHeader>
+
+
+
+
         <Styled.CardContentWrapper>
-            <Styled.ClassImg alt="" src={yogaClass.imgSrc} />
             <Styled.CardContentSubWrapper>
-                <Styled.ClassLevel>Level: {yogaClass.tag}</Styled.ClassLevel>
-                <Styled.ClassDescription>
+                {/* <Styled.ClassDescription>
                     <Styled.ClassDescriptionTitle>About This Class</Styled.ClassDescriptionTitle>
                     {yogaClass.description}
-                </Styled.ClassDescription>
-                <Styled.RemoveButton 
-                    onClick = {(e)=> {
-                        handleOnClick(e, {
-                            dayName: day,
-                            slotKey : timeSlot,
-                            classId : yogaClass.id
-                        })
-                    }}>
-                    Remove this Class
-                </Styled.RemoveButton>
+                </Styled.ClassDescription> */}
+
             </Styled.CardContentSubWrapper>
         </Styled.CardContentWrapper>
         </Styled.Wrapper>

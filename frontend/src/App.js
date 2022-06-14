@@ -110,8 +110,8 @@ function App() {
 }
 
 const Main = styled.div`
-  background-color: cornsilk;
   height: 100vh;
+  
 `;
 
 export default App;

@@ -89,8 +89,9 @@ const EditClasses = ({teachers, classes, setClasses}) => {
     return (
         <Styled.Wrapper>
             <Styled.Title>Add a New Class</Styled.Title>
-                    <Styled.Form onSubmit={handleSubmit}>
-                        <Styled.Label htmlFor="title">first name:</Styled.Label>
+                <Styled.Form onSubmit={handleSubmit}>
+                    <Styled.Section>
+                        <Styled.Label htmlFor="title">class title:</Styled.Label>
                         <Styled.Input
                             type="text"
                             id="title"
@@ -100,7 +101,9 @@ const EditClasses = ({teachers, classes, setClasses}) => {
                             value={title}
                             required
                         />
-                        <Styled.Label htmlFor="description">description</Styled.Label>
+                    </Styled.Section>
+                    <Styled.Section>
+                        <Styled.Label htmlFor="description">description:</Styled.Label>
                         <Styled.TextArea
                             id="description"
                             autoComplete="off"
@@ -108,32 +111,37 @@ const EditClasses = ({teachers, classes, setClasses}) => {
                             value={description}
                             required
                         />
-                        <Styled.Label htmlFor ="tag"> Choose a tag for this class</Styled.Label>
+                    </Styled.Section>
+                    <Styled.Section>
+                        <Styled.Label htmlFor ="tag">choose a tag:</Styled.Label>
                         <Styled.Select 
                             id="tag" 
                             onChange={(e) => setTag(e.target.value)} 
                             value= {tag}
                             required>
-                            <option value ="" >Choose a Tag</option>
+                            <option value ="" >choose a tag</option>
                             <option value = 'beginner' >beginner</option>
                             <option value = 'intermediate' >intermediate</option>
                             <option value = 'advanced' >advanced</option>
                         </Styled.Select>
-                        <Styled.Label htmlFor ="teacher"> Assign a teacher for this class</Styled.Label>
+                    </Styled.Section>
+                    <Styled.Section>
+                        <Styled.Label htmlFor ="teacher">assign a teacher:</Styled.Label>
                         <CustomSelector 
-                            label = "Assign a Teacher"
+                            label = "assign a teacher"
                             selectedValue = {teacher}
                             data = {formatedTeacherData}
                             handleSelectChange = {handleSelectChange}
                             id = "teacher"
                         />
-
-
+                    </Styled.Section>
+                    <Styled.Section>
                         <Styled.SubmitButton type="submit">Add New Class</Styled.SubmitButton>
-                    </Styled.Form>
+                    </Styled.Section>
+                </Styled.Form>
 
-                    <Styled.SuccessSection className={successMsg ? "success_msg" : "hide"}>{successMsg}</Styled.SuccessSection>
-                    <Styled.ErrorSection className={errMsg ? "error_msg" : "hide"}>{errMsg}</Styled.ErrorSection>
+                <Styled.SuccessSection className={successMsg ? "success_msg" : "hide"}>{successMsg}</Styled.SuccessSection>
+                <Styled.ErrorSection className={errMsg ? "error_msg" : "hide"}>{errMsg}</Styled.ErrorSection>
         </Styled.Wrapper>
     );
 };

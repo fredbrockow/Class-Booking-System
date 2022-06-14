@@ -8,7 +8,33 @@ export default createGlobalStyle`
 :root{
 
     /* global variables */
-    --testColor: red;
+
+
+  /** font color */
+  --MainBlack : #707070;
+  --MainWhite : #e4e4e4;
+  --accent :#5c5470;
+
+  /* font styles */
+  --font-main-header : 'Federant', cursive;
+  --font-secondary-header: 'Overlock SC', cursive;
+  --font-text: 'Josefin Sans', sans-serif;
+  --font-anomaly: 'Roboto Condensed', sans-serif;
+  
+  /*backgrounds*/
+  --button-background-gray: rgba(200,195,190,1);
+  --semi-tranparent-grey: rgba(215,210,205,0.6);
+  --semi-tranparent-grey-InputField: rgba(205,200,195,0.4);
+
+  /*side panel background*/
+  --user-sidePanel: rgba(110,110,110,0.8);
+  --admin-background-mainPanel:#EFE7DF;
+
+  /*other*/
+  --error-message: rgba(210,51,51,0.7);
+  --green-confirmation: rgba(51,165,51,0.8);
+
+
 }
 
 
