@@ -47,11 +47,11 @@ const dbAdminAddClass = async (classInfo) => {
 
         const response = await db.collection(YOGA_CLASSES)
         .insertOne(
-            {id:id,src:"/public/Hatha.jpg",...classInfo, isActive:true}
+            {id:id,imgSrc:"/public/Hatha.jpg",...classInfo, isActive:true}
         );
         
         if(response.acknowledged){
-            return {id:id,src:"/public/Hatha.jpg",...classInfo, isActive:true};
+            return {id:id,imgSrc:"/public/Hatha.jpg",...classInfo, isActive:true};
         }
         else
         {

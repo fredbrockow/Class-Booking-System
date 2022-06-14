@@ -555,7 +555,7 @@ other codes:
     "status": 200,
     "data": {
         "id": "8d21b836-02d4-457e-a691-7fceb03f816e",
-        "src": "/public/Hatha.jpg",
+        "imgSrc": "/public/Hatha.jpg",
         "title": "New Class",
         "description": "this is a description of that new class",
         "teacher": "d143fcbb-edfe-46f6-8d81-54a6ca4c8387",
