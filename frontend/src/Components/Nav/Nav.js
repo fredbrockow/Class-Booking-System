@@ -23,7 +23,7 @@ const Nav = () => {
             <Styled.MiddleGroup>
                 <Styled.Button onClick = {()=> navigate("/")}>Home</Styled.Button>
                 <Styled.Button onClick = {()=> navigate("/schedule")}>Schedule</Styled.Button>
-                <Styled.Button onClick = {()=> navigate("/about")}>About Us</Styled.Button>
+                <Styled.Button onClick = {()=> navigate("/about")}>About</Styled.Button>
             </Styled.MiddleGroup>
             <Styled.RightGroup>
                 <Styled.AccountButton onClick = {()=> navigate("/user")}>My Account <VscAccount/></Styled.AccountButton>
