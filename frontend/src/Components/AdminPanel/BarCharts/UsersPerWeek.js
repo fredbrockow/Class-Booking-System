@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 import BarCharts from './BarCharts';
 import { useState } from 'react';
 

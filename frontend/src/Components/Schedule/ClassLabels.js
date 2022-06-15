@@ -18,8 +18,6 @@ const ClassLabels = () => {
                     <Styled.Value>You know the Sanskrit names of the poses. Your friends all say you're a nicer person since you started yoga.</Styled.Value>
                 </Styled.Section>
             </Styled.SubWrapper>
-
-            
         </Styled.Wrapper>
     );
 };

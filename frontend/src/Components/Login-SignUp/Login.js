@@ -43,7 +43,6 @@ const Login = () => {
             })
             .then((res) => res.json())
             .then((data) => {
-                // console.log(data);
                 if(data.status === 200){
                     setUsername('');
                     setPwd('');
@@ -53,7 +52,6 @@ const Login = () => {
                     // const roles = response?.data?.roles;
                     
                     // setAuth({ username, pwd, roles, accessToken });
-                    console.log(data.data);
                     setAuth({...data.data });
                     navigate(from, { replace: true });
                 }

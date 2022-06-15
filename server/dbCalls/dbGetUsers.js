@@ -33,9 +33,7 @@ const dbAuthUserByUsername = async (username) => {
        // close the connection to the database server
        client.close();
    }
-
 }
-
 
 module.exports = {
     dbAuthUserByUsername

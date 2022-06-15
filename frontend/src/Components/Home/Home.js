@@ -4,15 +4,12 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 import { useNavigate } from "react-router-dom";
 
-
-
 const Home = () => {
 
     const navigate = useNavigate();
 
     return (
         <Styled.Wrapper>
-
             <Styled.MainWrapper>
                 <Styled.HeaderImg alt='' src={MainPageYogaPose}/>
                 <Styled.MainSubWrapper>
@@ -32,8 +29,6 @@ const Home = () => {
                     <Styled.Button onClick={() => navigate('/schedule')}>Go To Schedule <BsArrowRightShort/></Styled.Button>
                 </Styled.ParagraphSubWrapper>
             </Styled.ParagraphWrapper>
-
-
         </Styled.Wrapper>
     )
 };

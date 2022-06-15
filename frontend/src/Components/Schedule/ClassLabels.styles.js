@@ -20,7 +20,6 @@ const Title = styled.div`
 
 const Section = styled.div`
     margin-bottom: 6px;
-
 `;
 
 const Field = styled.div`
@@ -29,9 +28,6 @@ const Field = styled.div`
 `;
 
 const Value = styled.div``;
-
-
-
 
 export {
     Wrapper, SubWrapper, Section,

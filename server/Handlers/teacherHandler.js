@@ -1,6 +1,6 @@
 const 
 {
-    DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR, 
+    DATA_NOT_FOUND, SUCCESS, 
     BAD_DATA_FORMAT, ALREADY_EXISTS, ERROR_INSERTING_TEACHER
 } 
 = require("../configuration/errorMessages");

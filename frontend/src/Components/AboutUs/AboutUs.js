@@ -11,7 +11,6 @@ import Me from "../../assets/Outlined4FA_NOFILL.png";
 import react_icon from "../../assets/React-icon.png"
 
 
-
 const AboutUs = () => {
     return (
         <Styled.Wrapper>

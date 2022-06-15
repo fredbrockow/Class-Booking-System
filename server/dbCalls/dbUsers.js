@@ -1,9 +1,5 @@
 const 
 {
-    DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR, 
-    BAD_DATA_FORMAT, ALREADY_EXISTS, ERROR_INSERTING_TEACHER,
-    ERROR_INSERTING_CLASS, TEACHER_DOES_NOT_EXIST, CLASS_ALREADY_EXISTS,
-    CLASS_DOES_NOT_EXISTS, CALENDAR_DAY_ISSUE, CALENDAR_TIME_SLOT_ISSUE,
     CALENDAR_NO_CLASS_SLOT, CALENDAR_NO_MATCH_CLASS, CLASS_IS_FULL,
     ALREADY_REGISTER_IN_CLASS, NOT_REGISTERED_IN_CLASS
 } 
@@ -12,7 +8,7 @@ const
 const {CLASS_MAX_CAPACITY } = require ('../configuration/ClassConfig')
 
 const {
-    DB_NAME, USERS, YOGA_CLASSES, CALENDAR_WEEK,TEACHERS,
+    DB_NAME, USERS, CALENDAR_WEEK,
     getNewClient
 }= require('../configuration/dbConfig');
 
@@ -76,8 +72,6 @@ const dbUsersAddClass = async (classInfo) => {
             {dayName:classInfo.dayName},
             {$set:{ [classInfo.slotKey]: updateObj}}
         );
-
-        // console.log("updatedCalendar.value ", updatedCalendar.value);
 
         const newCalendar = updatedCalendar.value;
         newCalendar[classInfo.slotKey].student.push(classInfo.userId);

@@ -83,7 +83,7 @@ const UserClass = () => {
             // setErrMsg('Adding Class Failed');
         }
     }
-    yogaClasses && console.log("yogaClasses ",classes);
+
     return (
         <Styled.Wrapper>
             <Styled.Title>Classes You Have Booked</Styled.Title>

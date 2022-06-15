@@ -1,6 +1,6 @@
 const 
 {
-    DATA_NOT_FOUND, CLASS_ALREADY_EXISTS, ERROR_INSERTING_CLASS, 
+    CLASS_ALREADY_EXISTS, ERROR_INSERTING_CLASS, 
     TEACHER_DOES_NOT_EXIST
 } 
 = require ('../configuration/errorMessages');

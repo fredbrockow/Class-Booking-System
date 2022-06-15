@@ -31,8 +31,6 @@ const ClassCard = ({ selectedClass, handleOnClick }) => {
          return isBooked;
     }
 
-    console.log(selectedClass);
-    
     useEffect(() => {
 
         const teacherUrl = `/teacher/${yogaClass.teacher}`;

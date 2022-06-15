@@ -8,8 +8,8 @@ const { adminAddTeacherHandler } = require('../../handlers/teacherHandler');
 const { adminAddClassHandler } = require('../../handlers/classHandler')
 const { adminGetAllUsersHandler } = require ('../../handlers/usersHandler')
 const {adminAddClassToCalendarHandler} = require ('../../handlers/calendarHandler')
-// to get the users of the studio
 
+// to get the users of the studio
 router.get('/', (req, res) => {
     res.status(200).json("admin");
 })
@@ -23,6 +23,7 @@ router.post('/teacher', adminAddTeacherHandler);
 //add a class
 router.post('/class', adminAddClassHandler);
 
+//assign a class to the calendar
 router.patch('/calendar', adminAddClassToCalendarHandler)
 
 module.exports = router;

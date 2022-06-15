@@ -24,24 +24,6 @@ app.use('/class', require('./routers/class') );
 // Calendar Routes
 app.use('/calendar', require('./routers/calendar'));
 
-app.patch('/testform', (req,res) => {
-
-    if(true){
-        res.status(200).json({
-            status: 200,
-            data: req.body,
-            message: {success:"it went through"}
-        });
-    }else{
-        res.status(400).json({
-            status: 400,
-            data: req.body,
-            message: {error:"somekind of error"}
-        });
-
-    }
-})
-
 // 404
 app.all('*', (req, res) => {
     res.status(404);

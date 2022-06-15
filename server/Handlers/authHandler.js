@@ -1,5 +1,4 @@
-const registeredUsers = require('../data/users.json');
-const {DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR} 
+const {DATA_NOT_FOUND} 
 = require("../configuration/errorMessages");
 
 const {dbAuthUserByUsername} = require('../dbCalls/dbGetUsers');

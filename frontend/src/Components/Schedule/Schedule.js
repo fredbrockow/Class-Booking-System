@@ -78,10 +78,8 @@ const Schedule = () => {
                 .then((res) => res.json())
                 .then((data) => {
                     if(data.status === 200){
-                        console.log("data.data ", data.data);
                         updateCalendar(data.data.calendar, classSelected.dayName);
                         updateUser (data.data.user);
-
                     }
                     else{
                         // setErrMsg(data.message.error);
