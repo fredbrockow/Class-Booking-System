@@ -1,8 +1,6 @@
 const 
 {
-    DATA_NOT_FOUND, SUCCESS, DATABASE_GENERIC_ERROR, 
-    BAD_DATA_FORMAT, ALREADY_EXISTS, ERROR_INSERTING_TEACHER,
-    ERROR_INSERTING_CLASS, TEACHER_DOES_NOT_EXIST, CLASS_ALREADY_EXISTS,
+    DATABASE_GENERIC_ERROR, 
     CLASS_DOES_NOT_EXISTS, CALENDAR_DAY_ISSUE, CALENDAR_TIME_SLOT_ISSUE
 } 
 = require ('../configuration/errorMessages');
@@ -28,7 +26,6 @@ const dbAdminAddClassToCalendar = async (classInfo) => {
             throw CLASS_DOES_NOT_EXISTS;
         }
     
-
         //check if the slot is still available
         const checkSlot = await db.collection(CALENDAR_WEEK).findOne({dayName:classInfo.dayName});
         if (checkClass === null ){

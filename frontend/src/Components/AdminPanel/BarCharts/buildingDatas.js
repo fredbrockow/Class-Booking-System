@@ -8,7 +8,6 @@ export const classHours = [
     "19h00 to 20h30"    //slot6
 ];
 
-
 export const slotColors = {
     slot1:"#C3E5AE",
     slot2:"#97DBAE",
@@ -21,8 +20,6 @@ export const slotColors = {
 export const usersPerClassColor = {
     total: "#23689B",
     normalized: "#FFAB73",
-
-
 };
 
 /**

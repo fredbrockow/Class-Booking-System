@@ -9,7 +9,6 @@ export default createGlobalStyle`
 
     /* global variables */
 
-
   /** font color */
   --MainBlack : #707070;
   --MainWhite : #e4e4e4;

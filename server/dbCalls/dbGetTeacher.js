@@ -2,14 +2,12 @@ const {
     DATA_NOT_FOUND
 } = require ('../configuration/errorMessages');
 
-
 const {
     DB_NAME, TEACHERS,
     getNewClient
 }= require('../configuration/dbConfig');
 
 const {remove_id, remove_idFromArray}= require('./db_utils');
-
 
 
 const dbGetAllTeachers = async () => {

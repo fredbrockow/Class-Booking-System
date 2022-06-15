@@ -30,11 +30,9 @@ const RightSideWrapper = styled.div`
 `;
 
 const Title = styled.div`
-
     margin-top: 40px;
     font-family: var(--font-secondary-header);
     color: var(--MainBlack);
-    
 `;
 
 const NoClassSelected = styled.div`
@@ -49,7 +47,6 @@ const NoClassSelected = styled.div`
     margin-right: 80px;
 
     display: flex;
-
     
     & span {
         width: 100%;
@@ -59,7 +56,6 @@ const NoClassSelected = styled.div`
         padding-left: 40px;
         
         border-left: solid 1px var(--MainBlack);
-        /* border-bottom: solid 1px var(--MainBlack) ; */
     }
 `;
 

@@ -5,7 +5,6 @@ import {
 
 } from "./calendar.utils";
 
-
 const Week = styled.div`
     background-color: #e7e6e1;
     /* background-color: #cadefc; */
@@ -55,7 +54,6 @@ const TimeSlot = styled.div`
     grid-row-start: ${props=>props.time_slot};
 
     /* height : 50px; */
-
 `;
 
 const Hours = styled.div`
@@ -68,7 +66,6 @@ const Hours = styled.div`
     align-self: flex-end;
     justify-self: flex-end;
     border-bottom: 1px solid black;
-
 `;
 
 const HoursWrapper = styled.div`
@@ -91,6 +88,10 @@ const ClassSlotWrapper = styled.div`
     align-items: center;
     height:100%;
     padding: 0px 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
 
 `;
 

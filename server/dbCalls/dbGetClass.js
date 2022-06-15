@@ -2,14 +2,12 @@ const {
     DATA_NOT_FOUND
 } = require ('../configuration/errorMessages');
 
-
 const {
     DB_NAME, YOGA_CLASSES,
     getNewClient
 }= require('../configuration/dbConfig');
 
 const {remove_id, remove_idFromArray}= require('./db_utils');
-
 
 
 const dbGetAllClasses = async () => {
@@ -64,7 +62,6 @@ const dbGetClassById = async (classId) => {
         client.close();
     }   
 }
-
 
 module.exports = {
     dbGetAllClasses, dbGetClassById

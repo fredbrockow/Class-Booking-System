@@ -32,7 +32,6 @@ import EditClasses from "./Components/AdminPanel/Edits/EditClasses";
 import EditCalendar from "./Components/AdminPanel/Edits/EditCalendar";
 
 
-
 /**
  *  Obviously note secure. Will change it if I have time to go 
  *  full JSON Web Token
@@ -58,11 +57,6 @@ function App() {
                 <Route path="about" element={<AboutUs/>} />
 
                 {/* protected users Routes */}
-                {/* <Route element={<RequireAuth allowedRoles = {[ROLES.user, ROLES.admin]}/>} >
-                    <Route path="myClass" element={<UserClass/>} />
-                </Route> */}
-
-                {/* protected users Routes */}
                 <Route element={<RequireAuth allowedRoles = {[ROLES.user, ROLES.admin]}/>} >
                   <Route path="user" element={<UserPanel/>} >
                     <Route index element={<UserProfile/>} />
@@ -70,14 +64,6 @@ function App() {
                     <Route path="userClass" element={<UserClass/>} />
                   </Route>
                 </Route>
-
-                {/* <Route path="user" element={<UserPanel/>} >
-                  <Route index element={<UserProfile/>} />
-                  <Route path="userProfile" element={<UserProfile/>} />
-                  <Route path="userClass" element={<UserClass/>} />
-                </Route> */}
-
-
 
                 {/* protected admin Routes */}
                 <Route element={<RequireAuth allowedRoles = {[ROLES.admin]}/> } >
@@ -90,18 +76,7 @@ function App() {
                   </Route>
                 </Route>
                   
-                  
-                  {/* FOR TEST ONLY NEED TO BE BACK IN THE PROTECTED AREA ONCE DONE */}
-                  {/* <Route path="admin//*" element={<AdminPanel/>} >
-                    <Route path= "editTeachers" element = {<EditTeachers/>} /> 
-                    <Route path= "editClasses" element = {<EditClasses/>} /> 
-                    <Route path= "editCalendar" element = {<EditCalendar/>} /> 
-                    <Route path= "usersPerWeek" element = {<UsersPerWeek/>} /> 
-                    <Route path= "usersPerClass" element = {<UsersPerClass/>} />
-                  </Route> */}
-                
                 <Route path="*" element={<Page404/>} />
-                
           </Route>
         </Routes>
       </Router>

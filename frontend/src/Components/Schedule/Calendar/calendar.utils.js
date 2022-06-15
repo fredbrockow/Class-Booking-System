@@ -14,18 +14,12 @@ const getClassById = (classId, yoga_classes) => {
     return classTarget;
 };
 
-
 /* Those are imported for css purpose*/
 const class_level_color = {
     beginner: "#f0ece2",
     intermediate: "#dfd3c3",
     advanced: "#c7b198"
 };
-// const class_level_color = {
-//     beginner: "#ABD2FA",
-//     intermediate: "#708BEB",
-//     advanced: "#41628E"
-// };
 
 const classHours = [
     "9h00 to 10h30",    //slot1
@@ -54,14 +48,6 @@ const days_colors = {
     friday : "#e7e6e1",
     saturday : "#c1c0b9"
 }
-// const days_colors = {
-//     monday : "97DBAE",
-//     tuesday : "#F1E1A6",
-//     wednesday : "#C3E5AE",
-//     thursday : "97DBAE",
-//     friday : "#F1E1A6",
-//     saturday : "#C3E5AE"
-// }
 
 export {
     getClassById, 
